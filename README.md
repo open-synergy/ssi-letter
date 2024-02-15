@@ -19,6 +19,7 @@ Available addons
 addon | version | maintainers | summary
 --- | --- | --- | ---
 [ssi_letter](ssi_letter/) | 14.0.1.1.0 |  | Letter Management
+[ssi_letter_work_log](ssi_letter_work_log/) | 14.0.1.0.0 |  | Letter Management - Work Log Integration
 
 [//]: # (end addons)
 
