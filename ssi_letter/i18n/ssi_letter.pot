@@ -1,0 +1,871 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ssi_letter
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ssi_letter
+#: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__name
+#: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__name
+#: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__name
+msgid "# Document"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__message_needaction
+#: model:ir.model.fields,field_description:ssi_letter.field_letter_type__message_needaction
+#: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__message_needaction
+#: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,field_description:ssi_letter.field_letter_type__active
+msgid "Active"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__active_approval_ids
+#: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__active_approval_ids
+msgid "Active Approvals"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__active_approver_partner_ids
+#: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__active_approver_partner_ids
+msgid "Active Partners"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__active_approver_user_ids
+#: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__active_approver_user_ids
+msgid "Active Users"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__activity_ids
+#: model:ir.model.fields,field_description:ssi_letter.field_letter_type__activity_ids
+#: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__activity_ids
+#: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__activity_exception_decoration
+#: model:ir.model.fields,field_description:ssi_letter.field_letter_type__activity_exception_decoration
+#: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__activity_exception_decoration
+#: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__activity_state
+#: model:ir.model.fields,field_description:ssi_letter.field_letter_type__activity_state
+#: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__activity_state
+#: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__activity_type_icon
+#: model:ir.model.fields,field_description:ssi_letter.field_letter_type__activity_type_icon
+#: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__activity_type_icon
+#: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: ssi_letter
+#: model:res.groups,name:ssi_letter.incoming_letter_all_group
+#: model:res.groups,name:ssi_letter.outgoing_letter_all_group
+msgid "All"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__allowed_contact_ids
+#: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__allowed_contact_ids
+#: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__allowed_contact_ids
+msgid "Allowed Contact"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__allowed_policy_template_ids
+#: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__allowed_policy_template_ids
+#: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__allowed_policy_template_ids
+msgid "Allowed Policy Templates"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,help:ssi_letter.field_incoming_letter__approval_template_id
+#: model:ir.model.fields,help:ssi_letter.field_outgoing_letter__approval_template_id
+msgid "Approval Configuration"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__approval_template_id
+#: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__approval_template_id
+msgid "Approval Template"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__approval_ids
+#: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__approval_ids
+msgid "Approvals"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,help:ssi_letter.field_incoming_letter__approve_ok
+#: model:ir.model.fields,help:ssi_letter.field_outgoing_letter__approve_ok
+msgid ""
+"Approve policy\n"
+"\n"
+"* If active user can see and execute 'Approve' button"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__approved
+#: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__approved
+msgid "Approved"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__message_attachment_count
+#: model:ir.model.fields,field_description:ssi_letter.field_letter_type__message_attachment_count
+#: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__message_attachment_count
+#: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__approve_ok
+#: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__approve_ok
+msgid "Can Approve"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__cancel_ok
+#: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__cancel_ok
+msgid "Can Cancel"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__confirm_ok
+#: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__confirm_ok
+msgid "Can Confirm"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__done_ok
+#: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__done_ok
+msgid "Can Finished"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__manual_number_ok
+#: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__manual_number_ok
+#: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__manual_number_ok
+msgid "Can Input Manual Document Number"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__reject_ok
+#: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__reject_ok
+msgid "Can Reject"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__restart_ok
+#: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__restart_ok
+#: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__restart_ok
+msgid "Can Restart"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__restart_approval_ok
+#: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__restart_approval_ok
+msgid "Can Restart Approval"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__open_ok
+msgid "Can Start"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__cancel_reason_id
+#: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__cancel_reason_id
+msgid "Cancel Reason"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,help:ssi_letter.field_incoming_letter__cancel_ok
+#: model:ir.model.fields,help:ssi_letter.field_outgoing_letter__cancel_ok
+msgid ""
+"Cancel policy\n"
+"\n"
+"* If active user can see and execute 'Cancel' button"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,field_description:ssi_letter.field_letter_type__code
+msgid "Code"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__company_id
+#: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__company_id
+#: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__company_id
+#: model:res.groups,name:ssi_letter.incoming_letter_company_group
+#: model:res.groups,name:ssi_letter.outgoing_letter_company_group
+msgid "Company"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__company_partner_id
+#: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__company_partner_id
+#: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__company_partner_id
+msgid "Company Partner"
+msgstr ""
+
+#. module: ssi_letter
+#: model:res.groups,name:ssi_letter.incoming_letter_company_child_group
+#: model:res.groups,name:ssi_letter.outgoing_letter_company_child_group
+msgid "Company and All Child Companies"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,help:ssi_letter.field_incoming_letter__company_id
+#: model:ir.model.fields,help:ssi_letter.field_mixin_letter__company_id
+#: model:ir.model.fields,help:ssi_letter.field_outgoing_letter__company_id
+msgid ""
+"Company that own the document\n"
+"\n"
+"* Automatically filled with user's company.\n"
+"  Default company can be changed"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.ui.menu,name:ssi_letter.menu_letter_configuration
+msgid "Configuration"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,help:ssi_letter.field_incoming_letter__confirm_ok
+#: model:ir.model.fields,help:ssi_letter.field_outgoing_letter__confirm_ok
+msgid ""
+"Confirm policy\n"
+"\n"
+"* If active user can see and execute 'Confirm' button"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__contact_partner_id
+#: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__contact_partner_id
+#: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__contact_partner_id
+msgid "Contact"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__courier_id
+#: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__courier_id
+#: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__courier_id
+msgid "Courier"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__create_uid
+#: model:ir.model.fields,field_description:ssi_letter.field_letter_type__create_uid
+#: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__create_date
+#: model:ir.model.fields,field_description:ssi_letter.field_letter_type__create_date
+#: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__date
+#: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__date
+#: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__date
+msgid "Date"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__digital
+#: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__digital
+#: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__digital
+msgid "Digital"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__display_name
+#: model:ir.model.fields,field_description:ssi_letter.field_letter_type__display_name
+#: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__display_name
+#: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,help:ssi_letter.field_incoming_letter__done_ok
+#: model:ir.model.fields,help:ssi_letter.field_outgoing_letter__done_ok
+msgid ""
+"Done policy\n"
+"\n"
+"* If active user can see and execute 'Done' button"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__message_follower_ids
+#: model:ir.model.fields,field_description:ssi_letter.field_letter_type__message_follower_ids
+#: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__message_follower_ids
+#: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__message_channel_ids
+#: model:ir.model.fields,field_description:ssi_letter.field_letter_type__message_channel_ids
+#: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__message_channel_ids
+#: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__message_partner_ids
+#: model:ir.model.fields,field_description:ssi_letter.field_letter_type__message_partner_ids
+#: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__message_partner_ids
+#: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,help:ssi_letter.field_incoming_letter__activity_type_icon
+#: model:ir.model.fields,help:ssi_letter.field_letter_type__activity_type_icon
+#: model:ir.model.fields,help:ssi_letter.field_mixin_letter__activity_type_icon
+#: model:ir.model.fields,help:ssi_letter.field_outgoing_letter__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__id
+#: model:ir.model.fields,field_description:ssi_letter.field_letter_type__id
+#: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__id
+#: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__id
+msgid "ID"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__activity_exception_icon
+#: model:ir.model.fields,field_description:ssi_letter.field_letter_type__activity_exception_icon
+#: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__activity_exception_icon
+#: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,help:ssi_letter.field_incoming_letter__activity_exception_icon
+#: model:ir.model.fields,help:ssi_letter.field_letter_type__activity_exception_icon
+#: model:ir.model.fields,help:ssi_letter.field_mixin_letter__activity_exception_icon
+#: model:ir.model.fields,help:ssi_letter.field_outgoing_letter__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,help:ssi_letter.field_incoming_letter__message_needaction
+#: model:ir.model.fields,help:ssi_letter.field_incoming_letter__message_unread
+#: model:ir.model.fields,help:ssi_letter.field_letter_type__message_needaction
+#: model:ir.model.fields,help:ssi_letter.field_letter_type__message_unread
+#: model:ir.model.fields,help:ssi_letter.field_mixin_letter__message_needaction
+#: model:ir.model.fields,help:ssi_letter.field_mixin_letter__message_unread
+#: model:ir.model.fields,help:ssi_letter.field_outgoing_letter__message_needaction
+#: model:ir.model.fields,help:ssi_letter.field_outgoing_letter__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,help:ssi_letter.field_incoming_letter__message_has_error
+#: model:ir.model.fields,help:ssi_letter.field_letter_type__message_has_error
+#: model:ir.model.fields,help:ssi_letter.field_mixin_letter__message_has_error
+#: model:ir.model.fields,help:ssi_letter.field_outgoing_letter__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.actions.act_window,name:ssi_letter.incoming_letter_action
+#: model:ir.model,name:ssi_letter.model_incoming_letter
+#: model:ir.module.category,name:ssi_letter.incoming_letter_data_ownership_module_category
+#: model:ir.module.category,name:ssi_letter.incoming_letter_workflow_module_category
+msgid "Incoming Letter"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.ui.menu,name:ssi_letter.incoming_letter_menu
+msgid "Incoming Letters"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__internal_partner_id
+#: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__internal_partner_id
+#: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__internal_partner_id
+msgid "Internal Partner"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__message_is_follower
+#: model:ir.model.fields,field_description:ssi_letter.field_letter_type__message_is_follower
+#: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__message_is_follower
+#: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter____last_update
+#: model:ir.model.fields,field_description:ssi_letter.field_letter_type____last_update
+#: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter____last_update
+#: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__write_uid
+#: model:ir.model.fields,field_description:ssi_letter.field_letter_type__write_uid
+#: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__write_date
+#: model:ir.model.fields,field_description:ssi_letter.field_letter_type__write_date
+#: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.module.category,name:ssi_letter.letter_module_category
+#: model:ir.ui.menu,name:ssi_letter.menu_root_letter
+msgid "Letter"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.module.category,name:ssi_letter.letter_configurator_module_category
+msgid "Letter - Configurator"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.module.category,name:ssi_letter.letter_data_ownership_module_category
+msgid "Letter - Data Ownership"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.module.category,name:ssi_letter.letter_report_module_category
+msgid "Letter - Report"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.module.category,name:ssi_letter.letter_wizard_module_category
+msgid "Letter - Wizard"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.module.category,name:ssi_letter.letter_workflow_module_category
+msgid "Letter - Workflow"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model,name:ssi_letter.model_mixin_letter
+msgid "Letter Mixin"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model,name:ssi_letter.model_letter_type
+#: model:res.groups,name:ssi_letter.letter_type_group
+msgid "Letter Type"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.actions.act_window,name:ssi_letter.letter_type_action
+msgid "Letter Types"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__message_main_attachment_id
+#: model:ir.model.fields,field_description:ssi_letter.field_letter_type__message_main_attachment_id
+#: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__message_main_attachment_id
+#: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,help:ssi_letter.field_incoming_letter__manual_number_ok
+#: model:ir.model.fields,help:ssi_letter.field_mixin_letter__manual_number_ok
+#: model:ir.model.fields,help:ssi_letter.field_outgoing_letter__manual_number_ok
+msgid ""
+"Manual number assignment policy\n"
+"\n"
+"* If active user can edit document number"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,help:ssi_letter.field_letter_type__active
+msgid ""
+"Master data status\n"
+"\n"
+"* Inactive data can not be selected when creating new transaction\n"
+"* Transaction with inactive master data can still be viewed\n"
+"* Set master data as inactive if master data no longger needed,\n"
+"but master data already used on transaction"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,help:ssi_letter.field_letter_type__code
+msgid ""
+"Master data unique identifier.\n"
+"\n"
+"* Fill with '/' if You do not need unique identifier\n"
+"* Click 'Generate Code' button to automatically assign code.\n"
+"  Sequence template mush be set to perform this action\n"
+"  Only master data with '/' code will be assign automatic code"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__message_has_error
+#: model:ir.model.fields,field_description:ssi_letter.field_letter_type__message_has_error
+#: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__message_has_error
+#: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__message_ids
+#: model:ir.model.fields,field_description:ssi_letter.field_letter_type__message_ids
+#: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__message_ids
+#: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__my_activity_date_deadline
+#: model:ir.model.fields,field_description:ssi_letter.field_letter_type__my_activity_date_deadline
+#: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__my_activity_date_deadline
+#: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,field_description:ssi_letter.field_letter_type__name
+msgid "Name"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__need_validation
+#: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__need_validation
+msgid "Need Validation"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__activity_date_deadline
+#: model:ir.model.fields,field_description:ssi_letter.field_letter_type__activity_date_deadline
+#: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__activity_date_deadline
+#: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__activity_summary
+#: model:ir.model.fields,field_description:ssi_letter.field_letter_type__activity_summary
+#: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__activity_summary
+#: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__activity_type_id
+#: model:ir.model.fields,field_description:ssi_letter.field_letter_type__activity_type_id
+#: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__activity_type_id
+#: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__next_approval_ids
+#: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__next_approval_ids
+msgid "Next Approvals"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__note
+#: model:ir.model.fields,field_description:ssi_letter.field_letter_type__note
+#: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__note
+#: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__note
+msgid "Note"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__message_needaction_counter
+#: model:ir.model.fields,field_description:ssi_letter.field_letter_type__message_needaction_counter
+#: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__message_needaction_counter
+#: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__message_has_error_counter
+#: model:ir.model.fields,field_description:ssi_letter.field_letter_type__message_has_error_counter
+#: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__message_has_error_counter
+#: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,help:ssi_letter.field_incoming_letter__message_needaction_counter
+#: model:ir.model.fields,help:ssi_letter.field_letter_type__message_needaction_counter
+#: model:ir.model.fields,help:ssi_letter.field_mixin_letter__message_needaction_counter
+#: model:ir.model.fields,help:ssi_letter.field_outgoing_letter__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,help:ssi_letter.field_incoming_letter__message_has_error_counter
+#: model:ir.model.fields,help:ssi_letter.field_letter_type__message_has_error_counter
+#: model:ir.model.fields,help:ssi_letter.field_mixin_letter__message_has_error_counter
+#: model:ir.model.fields,help:ssi_letter.field_outgoing_letter__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,help:ssi_letter.field_incoming_letter__message_unread_counter
+#: model:ir.model.fields,help:ssi_letter.field_letter_type__message_unread_counter
+#: model:ir.model.fields,help:ssi_letter.field_mixin_letter__message_unread_counter
+#: model:ir.model.fields,help:ssi_letter.field_outgoing_letter__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.actions.act_window,name:ssi_letter.outgoing_letter_action
+#: model:ir.model,name:ssi_letter.model_outgoing_letter
+#: model:ir.module.category,name:ssi_letter.outgoing_letter_data_ownership_module_category
+#: model:ir.module.category,name:ssi_letter.outgoing_letter_workflow_module_category
+msgid "Outgoing Letter"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.ui.menu,name:ssi_letter.outgoing_letter_menu
+msgid "Outgoing Letters"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__partner_id
+#: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__partner_id
+#: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__partner_id
+msgid "Partner"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__policy_template_id
+#: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__policy_template_id
+#: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__policy_template_id
+msgid "Policy Template"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,help:ssi_letter.field_incoming_letter__reject_ok
+#: model:ir.model.fields,help:ssi_letter.field_outgoing_letter__reject_ok
+msgid ""
+"Reject policy\n"
+"\n"
+"* If active user can see and execute 'Reject' button"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__rejected
+#: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__rejected
+msgid "Rejected"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.ui.menu,name:ssi_letter.menu_letter_reporting
+msgid "Reporting"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__user_id
+#: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__user_id
+#: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__user_id
+msgid "Responsible"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__activity_user_id
+#: model:ir.model.fields,field_description:ssi_letter.field_letter_type__activity_user_id
+#: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__activity_user_id
+#: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,help:ssi_letter.field_incoming_letter__restart_approval_ok
+#: model:ir.model.fields,help:ssi_letter.field_outgoing_letter__restart_approval_ok
+msgid ""
+"Restart approval policy\n"
+"\n"
+"* If active user can see and execute 'Restart Approval' button"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,help:ssi_letter.field_incoming_letter__restart_ok
+#: model:ir.model.fields,help:ssi_letter.field_mixin_letter__restart_ok
+#: model:ir.model.fields,help:ssi_letter.field_outgoing_letter__restart_ok
+msgid ""
+"Restart policy\n"
+"\n"
+"* If active user can see and execute 'Restart' button"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__reviewer_id
+#: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__reviewer_id
+#: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__reviewer_id
+msgid "Reviewer"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,help:ssi_letter.field_outgoing_letter__open_ok
+msgid ""
+"Start policy\n"
+"\n"
+"* If active user can see and execute 'Start' button"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__state
+#: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__state
+#: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__state
+msgid "State"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,help:ssi_letter.field_incoming_letter__activity_state
+#: model:ir.model.fields,help:ssi_letter.field_letter_type__activity_state
+#: model:ir.model.fields,help:ssi_letter.field_mixin_letter__activity_state
+#: model:ir.model.fields,help:ssi_letter.field_outgoing_letter__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__title
+#: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__title
+#: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__title
+msgid "Title"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,help:ssi_letter.field_incoming_letter__name
+#: model:ir.model.fields,help:ssi_letter.field_mixin_letter__name
+#: model:ir.model.fields,help:ssi_letter.field_outgoing_letter__name
+msgid ""
+"Transaction/document number\n"
+"\n"
+"* Unique indentifer of transaction\n"
+"* Leave '/' to automatically generate number\n"
+"* Change '/' into any number/identifier to manually assign number.\n"
+"  Manual number assignment can be done in 'Draft' state\n"
+"  Only user with 'Can Manualy Assign Number' policy can manually assign number.\n"
+"* Transaction with number other than '/' can not be deleted."
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__type_id
+#: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__type_id
+#: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__type_id
+msgid "Type"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,help:ssi_letter.field_incoming_letter__activity_exception_decoration
+#: model:ir.model.fields,help:ssi_letter.field_letter_type__activity_exception_decoration
+#: model:ir.model.fields,help:ssi_letter.field_mixin_letter__activity_exception_decoration
+#: model:ir.model.fields,help:ssi_letter.field_outgoing_letter__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.ui.menu,name:ssi_letter.letter_type_menu
+msgid "Types"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__message_unread
+#: model:ir.model.fields,field_description:ssi_letter.field_letter_type__message_unread
+#: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__message_unread
+#: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__message_unread_counter
+#: model:ir.model.fields,field_description:ssi_letter.field_letter_type__message_unread_counter
+#: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__message_unread_counter
+#: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: ssi_letter
+#: model:res.groups,name:ssi_letter.incoming_letter_user_group
+#: model:res.groups,name:ssi_letter.outgoing_letter_user_group
+msgid "User"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,help:ssi_letter.field_incoming_letter__user_id
+#: model:ir.model.fields,help:ssi_letter.field_mixin_letter__user_id
+#: model:ir.model.fields,help:ssi_letter.field_outgoing_letter__user_id
+msgid ""
+"User that responsible for document\n"
+"\n"
+"* Create user can be different with responsible user\n"
+"* Automatically filled with user that initiate document creation.\n"
+"  Default responsible can be changed."
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,help:ssi_letter.field_incoming_letter__reviewer_id
+#: model:ir.model.fields,help:ssi_letter.field_mixin_letter__reviewer_id
+#: model:ir.model.fields,help:ssi_letter.field_outgoing_letter__reviewer_id
+msgid ""
+"User that responsible to review document\n"
+"\n"
+"* Unless it configured to approve reviewer does not equal to approver"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,help:ssi_letter.field_incoming_letter__active_approver_user_ids
+#: model:ir.model.fields,help:ssi_letter.field_outgoing_letter__active_approver_user_ids
+msgid "Users that can approve/reject document"
+msgstr ""
+
+#. module: ssi_letter
+#: model:res.groups,name:ssi_letter.incoming_letter_validator_group
+#: model:res.groups,name:ssi_letter.outgoing_letter_validator_group
+msgid "Validator"
+msgstr ""
+
+#. module: ssi_letter
+#: model:res.groups,name:ssi_letter.incoming_letter_viewer_group
+#: model:res.groups,name:ssi_letter.outgoing_letter_viewer_group
+msgid "Viewer"
+msgstr ""
