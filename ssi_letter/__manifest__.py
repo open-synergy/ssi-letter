@@ -1,6 +1,7 @@
 # Copyright 2023 OpenSynergy Indonesia
 # Copyright 2023 PT. Simetri Sinergi Indonesia
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+# pylint: disable=C8101
 {
     "name": "Letter Management",
     "version": "14.0.1.2.0",
@@ -17,14 +18,25 @@
         "ssi_transaction_partner_mixin",
     ],
     "data": [
-        "security/ir_module_category_data.xml",
-        "security/res_group_data.xml",
-        "security/ir.model.access.csv",
-        "security/ir_rule_data.xml",
-        "data/ir_sequence_data.xml",
-        "data/sequence_template_data.xml",
-        "data/policy_template_data.xml",
-        "data/approval_template_data.xml",
+        "security/ir_module_category/ir_module_category.xml",
+        "security/ir_module_category/outgoing_letter.xml",
+        "security/ir_module_category/incoming_letter.xml",
+        "security/res_groups/letter_type.xml",
+        "security/res_groups/outgoing_letter.xml",
+        "security/res_groups/incoming_letter.xml",
+        "security/ir_model_access/letter_type.xml",
+        "security/ir_model_access/outgoing_letter.xml",
+        "security/ir_model_access/incoming_letter.xml",
+        "security/ir_rule/incoming_letter.xml",
+        "security/ir_rule/outgoing_letter.xml",
+        "ir_sequence/outgoing_letter.xml",
+        "ir_sequence/incoming_letter.xml",
+        "sequence_template/outgoing_letter.xml",
+        "sequence_template/incoming_letter.xml",
+        "policy_template/outgoing_letter.xml",
+        "policy_template/incoming_letter.xml",
+        "approval_template/outgoing_letter.xml",
+        "approval_template/incoming_letter.xml",
         "menu.xml",
         "views/letter_type_views.xml",
         "views/letter_mixin_views.xml",
