@@ -15,6 +15,7 @@ msgstr ""
 
 #. module: ssi_letter
 #: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__name
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo__name
 #: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__name
 #: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__name
 msgid "# Document"
@@ -22,6 +23,8 @@ msgstr ""
 
 #. module: ssi_letter
 #: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__message_needaction
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo__message_needaction
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo_type__message_needaction
 #: model:ir.model.fields,field_description:ssi_letter.field_letter_type__message_needaction
 #: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__message_needaction
 #: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__message_needaction
@@ -29,30 +32,36 @@ msgid "Action Needed"
 msgstr ""
 
 #. module: ssi_letter
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo_type__active
 #: model:ir.model.fields,field_description:ssi_letter.field_letter_type__active
 msgid "Active"
 msgstr ""
 
 #. module: ssi_letter
 #: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__active_approval_ids
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo__active_approval_ids
 #: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__active_approval_ids
 msgid "Active Approvals"
 msgstr ""
 
 #. module: ssi_letter
 #: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__active_approver_partner_ids
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo__active_approver_partner_ids
 #: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__active_approver_partner_ids
 msgid "Active Partners"
 msgstr ""
 
 #. module: ssi_letter
 #: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__active_approver_user_ids
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo__active_approver_user_ids
 #: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__active_approver_user_ids
 msgid "Active Users"
 msgstr ""
 
 #. module: ssi_letter
 #: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__activity_ids
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo__activity_ids
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo_type__activity_ids
 #: model:ir.model.fields,field_description:ssi_letter.field_letter_type__activity_ids
 #: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__activity_ids
 #: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__activity_ids
@@ -61,6 +70,8 @@ msgstr ""
 
 #. module: ssi_letter
 #: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__activity_exception_decoration
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo__activity_exception_decoration
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo_type__activity_exception_decoration
 #: model:ir.model.fields,field_description:ssi_letter.field_letter_type__activity_exception_decoration
 #: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__activity_exception_decoration
 #: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__activity_exception_decoration
@@ -69,6 +80,8 @@ msgstr ""
 
 #. module: ssi_letter
 #: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__activity_state
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo__activity_state
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo_type__activity_state
 #: model:ir.model.fields,field_description:ssi_letter.field_letter_type__activity_state
 #: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__activity_state
 #: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__activity_state
@@ -77,6 +90,8 @@ msgstr ""
 
 #. module: ssi_letter
 #: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__activity_type_icon
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo__activity_type_icon
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo_type__activity_type_icon
 #: model:ir.model.fields,field_description:ssi_letter.field_letter_type__activity_type_icon
 #: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__activity_type_icon
 #: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__activity_type_icon
@@ -85,6 +100,7 @@ msgstr ""
 
 #. module: ssi_letter
 #: model:res.groups,name:ssi_letter.incoming_letter_all_group
+#: model:res.groups,name:ssi_letter.internal_memo_all_group
 #: model:res.groups,name:ssi_letter.outgoing_letter_all_group
 msgid "All"
 msgstr ""
@@ -98,6 +114,7 @@ msgstr ""
 
 #. module: ssi_letter
 #: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__allowed_policy_template_ids
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo__allowed_policy_template_ids
 #: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__allowed_policy_template_ids
 #: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__allowed_policy_template_ids
 msgid "Allowed Policy Templates"
@@ -105,24 +122,28 @@ msgstr ""
 
 #. module: ssi_letter
 #: model:ir.model.fields,help:ssi_letter.field_incoming_letter__approval_template_id
+#: model:ir.model.fields,help:ssi_letter.field_internal_memo__approval_template_id
 #: model:ir.model.fields,help:ssi_letter.field_outgoing_letter__approval_template_id
 msgid "Approval Configuration"
 msgstr ""
 
 #. module: ssi_letter
 #: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__approval_template_id
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo__approval_template_id
 #: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__approval_template_id
 msgid "Approval Template"
 msgstr ""
 
 #. module: ssi_letter
 #: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__approval_ids
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo__approval_ids
 #: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__approval_ids
 msgid "Approvals"
 msgstr ""
 
 #. module: ssi_letter
 #: model:ir.model.fields,help:ssi_letter.field_incoming_letter__approve_ok
+#: model:ir.model.fields,help:ssi_letter.field_internal_memo__approve_ok
 #: model:ir.model.fields,help:ssi_letter.field_outgoing_letter__approve_ok
 msgid ""
 "Approve policy\n"
@@ -132,12 +153,15 @@ msgstr ""
 
 #. module: ssi_letter
 #: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__approved
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo__approved
 #: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__approved
 msgid "Approved"
 msgstr ""
 
 #. module: ssi_letter
 #: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__message_attachment_count
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo__message_attachment_count
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo_type__message_attachment_count
 #: model:ir.model.fields,field_description:ssi_letter.field_letter_type__message_attachment_count
 #: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__message_attachment_count
 #: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__message_attachment_count
@@ -146,30 +170,35 @@ msgstr ""
 
 #. module: ssi_letter
 #: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__approve_ok
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo__approve_ok
 #: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__approve_ok
 msgid "Can Approve"
 msgstr ""
 
 #. module: ssi_letter
 #: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__cancel_ok
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo__cancel_ok
 #: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__cancel_ok
 msgid "Can Cancel"
 msgstr ""
 
 #. module: ssi_letter
 #: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__confirm_ok
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo__confirm_ok
 #: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__confirm_ok
 msgid "Can Confirm"
 msgstr ""
 
 #. module: ssi_letter
 #: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__done_ok
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo__done_ok
 #: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__done_ok
 msgid "Can Finished"
 msgstr ""
 
 #. module: ssi_letter
 #: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__manual_number_ok
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo__manual_number_ok
 #: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__manual_number_ok
 #: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__manual_number_ok
 msgid "Can Input Manual Document Number"
@@ -177,12 +206,14 @@ msgstr ""
 
 #. module: ssi_letter
 #: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__reject_ok
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo__reject_ok
 #: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__reject_ok
 msgid "Can Reject"
 msgstr ""
 
 #. module: ssi_letter
 #: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__restart_ok
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo__restart_ok
 #: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__restart_ok
 #: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__restart_ok
 msgid "Can Restart"
@@ -190,6 +221,7 @@ msgstr ""
 
 #. module: ssi_letter
 #: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__restart_approval_ok
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo__restart_approval_ok
 #: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__restart_approval_ok
 msgid "Can Restart Approval"
 msgstr ""
@@ -201,12 +233,14 @@ msgstr ""
 
 #. module: ssi_letter
 #: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__cancel_reason_id
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo__cancel_reason_id
 #: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__cancel_reason_id
 msgid "Cancel Reason"
 msgstr ""
 
 #. module: ssi_letter
 #: model:ir.model.fields,help:ssi_letter.field_incoming_letter__cancel_ok
+#: model:ir.model.fields,help:ssi_letter.field_internal_memo__cancel_ok
 #: model:ir.model.fields,help:ssi_letter.field_outgoing_letter__cancel_ok
 msgid ""
 "Cancel policy\n"
@@ -215,21 +249,25 @@ msgid ""
 msgstr ""
 
 #. module: ssi_letter
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo_type__code
 #: model:ir.model.fields,field_description:ssi_letter.field_letter_type__code
 msgid "Code"
 msgstr ""
 
 #. module: ssi_letter
 #: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__company_id
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo__company_id
 #: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__company_id
 #: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__company_id
 #: model:res.groups,name:ssi_letter.incoming_letter_company_group
+#: model:res.groups,name:ssi_letter.internal_memo_company_group
 #: model:res.groups,name:ssi_letter.outgoing_letter_company_group
 msgid "Company"
 msgstr ""
 
 #. module: ssi_letter
 #: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__company_partner_id
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo__company_partner_id
 #: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__company_partner_id
 #: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__company_partner_id
 msgid "Company Partner"
@@ -237,12 +275,14 @@ msgstr ""
 
 #. module: ssi_letter
 #: model:res.groups,name:ssi_letter.incoming_letter_company_child_group
+#: model:res.groups,name:ssi_letter.internal_memo_company_child_group
 #: model:res.groups,name:ssi_letter.outgoing_letter_company_child_group
 msgid "Company and All Child Companies"
 msgstr ""
 
 #. module: ssi_letter
 #: model:ir.model.fields,help:ssi_letter.field_incoming_letter__company_id
+#: model:ir.model.fields,help:ssi_letter.field_internal_memo__company_id
 #: model:ir.model.fields,help:ssi_letter.field_mixin_letter__company_id
 #: model:ir.model.fields,help:ssi_letter.field_outgoing_letter__company_id
 msgid ""
@@ -259,6 +299,7 @@ msgstr ""
 
 #. module: ssi_letter
 #: model:ir.model.fields,help:ssi_letter.field_incoming_letter__confirm_ok
+#: model:ir.model.fields,help:ssi_letter.field_internal_memo__confirm_ok
 #: model:ir.model.fields,help:ssi_letter.field_outgoing_letter__confirm_ok
 msgid ""
 "Confirm policy\n"
@@ -282,6 +323,8 @@ msgstr ""
 
 #. module: ssi_letter
 #: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__create_uid
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo__create_uid
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo_type__create_uid
 #: model:ir.model.fields,field_description:ssi_letter.field_letter_type__create_uid
 #: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__create_uid
 msgid "Created by"
@@ -289,6 +332,8 @@ msgstr ""
 
 #. module: ssi_letter
 #: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__create_date
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo__create_date
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo_type__create_date
 #: model:ir.model.fields,field_description:ssi_letter.field_letter_type__create_date
 #: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__create_date
 msgid "Created on"
@@ -296,6 +341,7 @@ msgstr ""
 
 #. module: ssi_letter
 #: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__date
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo__date
 #: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__date
 #: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__date
 msgid "Date"
@@ -310,6 +356,8 @@ msgstr ""
 
 #. module: ssi_letter
 #: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__display_name
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo__display_name
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo_type__display_name
 #: model:ir.model.fields,field_description:ssi_letter.field_letter_type__display_name
 #: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__display_name
 #: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__display_name
@@ -318,6 +366,7 @@ msgstr ""
 
 #. module: ssi_letter
 #: model:ir.model.fields,help:ssi_letter.field_incoming_letter__done_ok
+#: model:ir.model.fields,help:ssi_letter.field_internal_memo__done_ok
 #: model:ir.model.fields,help:ssi_letter.field_outgoing_letter__done_ok
 msgid ""
 "Done policy\n"
@@ -327,6 +376,8 @@ msgstr ""
 
 #. module: ssi_letter
 #: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__message_follower_ids
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo__message_follower_ids
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo_type__message_follower_ids
 #: model:ir.model.fields,field_description:ssi_letter.field_letter_type__message_follower_ids
 #: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__message_follower_ids
 #: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__message_follower_ids
@@ -335,6 +386,8 @@ msgstr ""
 
 #. module: ssi_letter
 #: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__message_channel_ids
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo__message_channel_ids
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo_type__message_channel_ids
 #: model:ir.model.fields,field_description:ssi_letter.field_letter_type__message_channel_ids
 #: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__message_channel_ids
 #: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__message_channel_ids
@@ -343,6 +396,8 @@ msgstr ""
 
 #. module: ssi_letter
 #: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__message_partner_ids
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo__message_partner_ids
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo_type__message_partner_ids
 #: model:ir.model.fields,field_description:ssi_letter.field_letter_type__message_partner_ids
 #: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__message_partner_ids
 #: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__message_partner_ids
@@ -351,6 +406,8 @@ msgstr ""
 
 #. module: ssi_letter
 #: model:ir.model.fields,help:ssi_letter.field_incoming_letter__activity_type_icon
+#: model:ir.model.fields,help:ssi_letter.field_internal_memo__activity_type_icon
+#: model:ir.model.fields,help:ssi_letter.field_internal_memo_type__activity_type_icon
 #: model:ir.model.fields,help:ssi_letter.field_letter_type__activity_type_icon
 #: model:ir.model.fields,help:ssi_letter.field_mixin_letter__activity_type_icon
 #: model:ir.model.fields,help:ssi_letter.field_outgoing_letter__activity_type_icon
@@ -359,6 +416,8 @@ msgstr ""
 
 #. module: ssi_letter
 #: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__id
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo__id
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo_type__id
 #: model:ir.model.fields,field_description:ssi_letter.field_letter_type__id
 #: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__id
 #: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__id
@@ -367,6 +426,8 @@ msgstr ""
 
 #. module: ssi_letter
 #: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__activity_exception_icon
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo__activity_exception_icon
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo_type__activity_exception_icon
 #: model:ir.model.fields,field_description:ssi_letter.field_letter_type__activity_exception_icon
 #: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__activity_exception_icon
 #: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__activity_exception_icon
@@ -375,6 +436,8 @@ msgstr ""
 
 #. module: ssi_letter
 #: model:ir.model.fields,help:ssi_letter.field_incoming_letter__activity_exception_icon
+#: model:ir.model.fields,help:ssi_letter.field_internal_memo__activity_exception_icon
+#: model:ir.model.fields,help:ssi_letter.field_internal_memo_type__activity_exception_icon
 #: model:ir.model.fields,help:ssi_letter.field_letter_type__activity_exception_icon
 #: model:ir.model.fields,help:ssi_letter.field_mixin_letter__activity_exception_icon
 #: model:ir.model.fields,help:ssi_letter.field_outgoing_letter__activity_exception_icon
@@ -384,6 +447,10 @@ msgstr ""
 #. module: ssi_letter
 #: model:ir.model.fields,help:ssi_letter.field_incoming_letter__message_needaction
 #: model:ir.model.fields,help:ssi_letter.field_incoming_letter__message_unread
+#: model:ir.model.fields,help:ssi_letter.field_internal_memo__message_needaction
+#: model:ir.model.fields,help:ssi_letter.field_internal_memo__message_unread
+#: model:ir.model.fields,help:ssi_letter.field_internal_memo_type__message_needaction
+#: model:ir.model.fields,help:ssi_letter.field_internal_memo_type__message_unread
 #: model:ir.model.fields,help:ssi_letter.field_letter_type__message_needaction
 #: model:ir.model.fields,help:ssi_letter.field_letter_type__message_unread
 #: model:ir.model.fields,help:ssi_letter.field_mixin_letter__message_needaction
@@ -395,6 +462,8 @@ msgstr ""
 
 #. module: ssi_letter
 #: model:ir.model.fields,help:ssi_letter.field_incoming_letter__message_has_error
+#: model:ir.model.fields,help:ssi_letter.field_internal_memo__message_has_error
+#: model:ir.model.fields,help:ssi_letter.field_internal_memo_type__message_has_error
 #: model:ir.model.fields,help:ssi_letter.field_letter_type__message_has_error
 #: model:ir.model.fields,help:ssi_letter.field_mixin_letter__message_has_error
 #: model:ir.model.fields,help:ssi_letter.field_outgoing_letter__message_has_error
@@ -415,6 +484,31 @@ msgid "Incoming Letters"
 msgstr ""
 
 #. module: ssi_letter
+#: model:ir.actions.act_window,name:ssi_letter.internal_memo_action
+#: model:ir.model,name:ssi_letter.model_internal_memo
+#: model:ir.module.category,name:ssi_letter.internal_memo_data_ownership_module_category
+#: model:ir.module.category,name:ssi_letter.internal_memo_workflow_module_category
+msgid "Internal Memo"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model,name:ssi_letter.model_internal_memo_type
+#: model:res.groups,name:ssi_letter.internal_memo_type_group
+msgid "Internal Memo Type"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.actions.act_window,name:ssi_letter.internal_memo_type_action
+#: model:ir.ui.menu,name:ssi_letter.internal_memo_type_menu
+msgid "Internal Memo Types"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.ui.menu,name:ssi_letter.internal_memo_menu
+msgid "Internal Memos"
+msgstr ""
+
+#. module: ssi_letter
 #: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__internal_partner_id
 #: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__internal_partner_id
 #: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__internal_partner_id
@@ -423,6 +517,8 @@ msgstr ""
 
 #. module: ssi_letter
 #: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__message_is_follower
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo__message_is_follower
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo_type__message_is_follower
 #: model:ir.model.fields,field_description:ssi_letter.field_letter_type__message_is_follower
 #: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__message_is_follower
 #: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__message_is_follower
@@ -431,6 +527,8 @@ msgstr ""
 
 #. module: ssi_letter
 #: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter____last_update
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo____last_update
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo_type____last_update
 #: model:ir.model.fields,field_description:ssi_letter.field_letter_type____last_update
 #: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter____last_update
 #: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter____last_update
@@ -439,6 +537,8 @@ msgstr ""
 
 #. module: ssi_letter
 #: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__write_uid
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo__write_uid
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo_type__write_uid
 #: model:ir.model.fields,field_description:ssi_letter.field_letter_type__write_uid
 #: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__write_uid
 msgid "Last Updated by"
@@ -446,6 +546,8 @@ msgstr ""
 
 #. module: ssi_letter
 #: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__write_date
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo__write_date
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo_type__write_date
 #: model:ir.model.fields,field_description:ssi_letter.field_letter_type__write_date
 #: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__write_date
 msgid "Last Updated on"
@@ -495,11 +597,14 @@ msgstr ""
 
 #. module: ssi_letter
 #: model:ir.actions.act_window,name:ssi_letter.letter_type_action
+#: model:ir.ui.menu,name:ssi_letter.letter_type_menu
 msgid "Letter Types"
 msgstr ""
 
 #. module: ssi_letter
 #: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__message_main_attachment_id
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo__message_main_attachment_id
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo_type__message_main_attachment_id
 #: model:ir.model.fields,field_description:ssi_letter.field_letter_type__message_main_attachment_id
 #: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__message_main_attachment_id
 #: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__message_main_attachment_id
@@ -508,6 +613,7 @@ msgstr ""
 
 #. module: ssi_letter
 #: model:ir.model.fields,help:ssi_letter.field_incoming_letter__manual_number_ok
+#: model:ir.model.fields,help:ssi_letter.field_internal_memo__manual_number_ok
 #: model:ir.model.fields,help:ssi_letter.field_mixin_letter__manual_number_ok
 #: model:ir.model.fields,help:ssi_letter.field_outgoing_letter__manual_number_ok
 msgid ""
@@ -517,6 +623,7 @@ msgid ""
 msgstr ""
 
 #. module: ssi_letter
+#: model:ir.model.fields,help:ssi_letter.field_internal_memo_type__active
 #: model:ir.model.fields,help:ssi_letter.field_letter_type__active
 msgid ""
 "Master data status\n"
@@ -528,6 +635,7 @@ msgid ""
 msgstr ""
 
 #. module: ssi_letter
+#: model:ir.model.fields,help:ssi_letter.field_internal_memo_type__code
 #: model:ir.model.fields,help:ssi_letter.field_letter_type__code
 msgid ""
 "Master data unique identifier.\n"
@@ -539,7 +647,15 @@ msgid ""
 msgstr ""
 
 #. module: ssi_letter
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo__memo
+#: model_terms:ir.ui.view,arch_db:ssi_letter.internal_memo_view_form
+msgid "Memo"
+msgstr ""
+
+#. module: ssi_letter
 #: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__message_has_error
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo__message_has_error
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo_type__message_has_error
 #: model:ir.model.fields,field_description:ssi_letter.field_letter_type__message_has_error
 #: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__message_has_error
 #: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__message_has_error
@@ -548,6 +664,8 @@ msgstr ""
 
 #. module: ssi_letter
 #: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__message_ids
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo__message_ids
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo_type__message_ids
 #: model:ir.model.fields,field_description:ssi_letter.field_letter_type__message_ids
 #: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__message_ids
 #: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__message_ids
@@ -556,6 +674,8 @@ msgstr ""
 
 #. module: ssi_letter
 #: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__my_activity_date_deadline
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo__my_activity_date_deadline
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo_type__my_activity_date_deadline
 #: model:ir.model.fields,field_description:ssi_letter.field_letter_type__my_activity_date_deadline
 #: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__my_activity_date_deadline
 #: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__my_activity_date_deadline
@@ -563,18 +683,22 @@ msgid "My Activity Deadline"
 msgstr ""
 
 #. module: ssi_letter
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo_type__name
 #: model:ir.model.fields,field_description:ssi_letter.field_letter_type__name
 msgid "Name"
 msgstr ""
 
 #. module: ssi_letter
 #: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__need_validation
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo__need_validation
 #: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__need_validation
 msgid "Need Validation"
 msgstr ""
 
 #. module: ssi_letter
 #: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__activity_date_deadline
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo__activity_date_deadline
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo_type__activity_date_deadline
 #: model:ir.model.fields,field_description:ssi_letter.field_letter_type__activity_date_deadline
 #: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__activity_date_deadline
 #: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__activity_date_deadline
@@ -583,6 +707,8 @@ msgstr ""
 
 #. module: ssi_letter
 #: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__activity_summary
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo__activity_summary
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo_type__activity_summary
 #: model:ir.model.fields,field_description:ssi_letter.field_letter_type__activity_summary
 #: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__activity_summary
 #: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__activity_summary
@@ -591,6 +717,8 @@ msgstr ""
 
 #. module: ssi_letter
 #: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__activity_type_id
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo__activity_type_id
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo_type__activity_type_id
 #: model:ir.model.fields,field_description:ssi_letter.field_letter_type__activity_type_id
 #: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__activity_type_id
 #: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__activity_type_id
@@ -599,12 +727,15 @@ msgstr ""
 
 #. module: ssi_letter
 #: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__next_approval_ids
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo__next_approval_ids
 #: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__next_approval_ids
 msgid "Next Approvals"
 msgstr ""
 
 #. module: ssi_letter
 #: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__note
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo__note
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo_type__note
 #: model:ir.model.fields,field_description:ssi_letter.field_letter_type__note
 #: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__note
 #: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__note
@@ -613,6 +744,8 @@ msgstr ""
 
 #. module: ssi_letter
 #: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__message_needaction_counter
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo__message_needaction_counter
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo_type__message_needaction_counter
 #: model:ir.model.fields,field_description:ssi_letter.field_letter_type__message_needaction_counter
 #: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__message_needaction_counter
 #: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__message_needaction_counter
@@ -621,6 +754,8 @@ msgstr ""
 
 #. module: ssi_letter
 #: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__message_has_error_counter
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo__message_has_error_counter
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo_type__message_has_error_counter
 #: model:ir.model.fields,field_description:ssi_letter.field_letter_type__message_has_error_counter
 #: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__message_has_error_counter
 #: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__message_has_error_counter
@@ -629,6 +764,8 @@ msgstr ""
 
 #. module: ssi_letter
 #: model:ir.model.fields,help:ssi_letter.field_incoming_letter__message_needaction_counter
+#: model:ir.model.fields,help:ssi_letter.field_internal_memo__message_needaction_counter
+#: model:ir.model.fields,help:ssi_letter.field_internal_memo_type__message_needaction_counter
 #: model:ir.model.fields,help:ssi_letter.field_letter_type__message_needaction_counter
 #: model:ir.model.fields,help:ssi_letter.field_mixin_letter__message_needaction_counter
 #: model:ir.model.fields,help:ssi_letter.field_outgoing_letter__message_needaction_counter
@@ -637,6 +774,8 @@ msgstr ""
 
 #. module: ssi_letter
 #: model:ir.model.fields,help:ssi_letter.field_incoming_letter__message_has_error_counter
+#: model:ir.model.fields,help:ssi_letter.field_internal_memo__message_has_error_counter
+#: model:ir.model.fields,help:ssi_letter.field_internal_memo_type__message_has_error_counter
 #: model:ir.model.fields,help:ssi_letter.field_letter_type__message_has_error_counter
 #: model:ir.model.fields,help:ssi_letter.field_mixin_letter__message_has_error_counter
 #: model:ir.model.fields,help:ssi_letter.field_outgoing_letter__message_has_error_counter
@@ -645,6 +784,8 @@ msgstr ""
 
 #. module: ssi_letter
 #: model:ir.model.fields,help:ssi_letter.field_incoming_letter__message_unread_counter
+#: model:ir.model.fields,help:ssi_letter.field_internal_memo__message_unread_counter
+#: model:ir.model.fields,help:ssi_letter.field_internal_memo_type__message_unread_counter
 #: model:ir.model.fields,help:ssi_letter.field_letter_type__message_unread_counter
 #: model:ir.model.fields,help:ssi_letter.field_mixin_letter__message_unread_counter
 #: model:ir.model.fields,help:ssi_letter.field_outgoing_letter__message_unread_counter
@@ -673,13 +814,20 @@ msgstr ""
 
 #. module: ssi_letter
 #: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__policy_template_id
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo__policy_template_id
 #: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__policy_template_id
 #: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__policy_template_id
 msgid "Policy Template"
 msgstr ""
 
 #. module: ssi_letter
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo__recipient_ids
+msgid "Recipients"
+msgstr ""
+
+#. module: ssi_letter
 #: model:ir.model.fields,help:ssi_letter.field_incoming_letter__reject_ok
+#: model:ir.model.fields,help:ssi_letter.field_internal_memo__reject_ok
 #: model:ir.model.fields,help:ssi_letter.field_outgoing_letter__reject_ok
 msgid ""
 "Reject policy\n"
@@ -689,6 +837,7 @@ msgstr ""
 
 #. module: ssi_letter
 #: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__rejected
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo__rejected
 #: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__rejected
 msgid "Rejected"
 msgstr ""
@@ -700,6 +849,7 @@ msgstr ""
 
 #. module: ssi_letter
 #: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__user_id
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo__user_id
 #: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__user_id
 #: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__user_id
 msgid "Responsible"
@@ -707,6 +857,8 @@ msgstr ""
 
 #. module: ssi_letter
 #: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__activity_user_id
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo__activity_user_id
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo_type__activity_user_id
 #: model:ir.model.fields,field_description:ssi_letter.field_letter_type__activity_user_id
 #: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__activity_user_id
 #: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__activity_user_id
@@ -715,6 +867,7 @@ msgstr ""
 
 #. module: ssi_letter
 #: model:ir.model.fields,help:ssi_letter.field_incoming_letter__restart_approval_ok
+#: model:ir.model.fields,help:ssi_letter.field_internal_memo__restart_approval_ok
 #: model:ir.model.fields,help:ssi_letter.field_outgoing_letter__restart_approval_ok
 msgid ""
 "Restart approval policy\n"
@@ -724,6 +877,7 @@ msgstr ""
 
 #. module: ssi_letter
 #: model:ir.model.fields,help:ssi_letter.field_incoming_letter__restart_ok
+#: model:ir.model.fields,help:ssi_letter.field_internal_memo__restart_ok
 #: model:ir.model.fields,help:ssi_letter.field_mixin_letter__restart_ok
 #: model:ir.model.fields,help:ssi_letter.field_outgoing_letter__restart_ok
 msgid ""
@@ -734,6 +888,7 @@ msgstr ""
 
 #. module: ssi_letter
 #: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__reviewer_id
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo__reviewer_id
 #: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__reviewer_id
 #: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__reviewer_id
 msgid "Reviewer"
@@ -749,6 +904,7 @@ msgstr ""
 
 #. module: ssi_letter
 #: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__state
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo__state
 #: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__state
 #: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__state
 msgid "State"
@@ -756,6 +912,8 @@ msgstr ""
 
 #. module: ssi_letter
 #: model:ir.model.fields,help:ssi_letter.field_incoming_letter__activity_state
+#: model:ir.model.fields,help:ssi_letter.field_internal_memo__activity_state
+#: model:ir.model.fields,help:ssi_letter.field_internal_memo_type__activity_state
 #: model:ir.model.fields,help:ssi_letter.field_letter_type__activity_state
 #: model:ir.model.fields,help:ssi_letter.field_mixin_letter__activity_state
 #: model:ir.model.fields,help:ssi_letter.field_outgoing_letter__activity_state
@@ -768,6 +926,7 @@ msgstr ""
 
 #. module: ssi_letter
 #: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__title
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo__title
 #: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__title
 #: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__title
 msgid "Title"
@@ -775,6 +934,7 @@ msgstr ""
 
 #. module: ssi_letter
 #: model:ir.model.fields,help:ssi_letter.field_incoming_letter__name
+#: model:ir.model.fields,help:ssi_letter.field_internal_memo__name
 #: model:ir.model.fields,help:ssi_letter.field_mixin_letter__name
 #: model:ir.model.fields,help:ssi_letter.field_outgoing_letter__name
 msgid ""
@@ -790,6 +950,7 @@ msgstr ""
 
 #. module: ssi_letter
 #: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__type_id
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo__type_id
 #: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__type_id
 #: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__type_id
 msgid "Type"
@@ -797,6 +958,8 @@ msgstr ""
 
 #. module: ssi_letter
 #: model:ir.model.fields,help:ssi_letter.field_incoming_letter__activity_exception_decoration
+#: model:ir.model.fields,help:ssi_letter.field_internal_memo__activity_exception_decoration
+#: model:ir.model.fields,help:ssi_letter.field_internal_memo_type__activity_exception_decoration
 #: model:ir.model.fields,help:ssi_letter.field_letter_type__activity_exception_decoration
 #: model:ir.model.fields,help:ssi_letter.field_mixin_letter__activity_exception_decoration
 #: model:ir.model.fields,help:ssi_letter.field_outgoing_letter__activity_exception_decoration
@@ -804,12 +967,9 @@ msgid "Type of the exception activity on record."
 msgstr ""
 
 #. module: ssi_letter
-#: model:ir.ui.menu,name:ssi_letter.letter_type_menu
-msgid "Types"
-msgstr ""
-
-#. module: ssi_letter
 #: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__message_unread
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo__message_unread
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo_type__message_unread
 #: model:ir.model.fields,field_description:ssi_letter.field_letter_type__message_unread
 #: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__message_unread
 #: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__message_unread
@@ -818,6 +978,8 @@ msgstr ""
 
 #. module: ssi_letter
 #: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__message_unread_counter
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo__message_unread_counter
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo_type__message_unread_counter
 #: model:ir.model.fields,field_description:ssi_letter.field_letter_type__message_unread_counter
 #: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__message_unread_counter
 #: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__message_unread_counter
@@ -826,12 +988,14 @@ msgstr ""
 
 #. module: ssi_letter
 #: model:res.groups,name:ssi_letter.incoming_letter_user_group
+#: model:res.groups,name:ssi_letter.internal_memo_user_group
 #: model:res.groups,name:ssi_letter.outgoing_letter_user_group
 msgid "User"
 msgstr ""
 
 #. module: ssi_letter
 #: model:ir.model.fields,help:ssi_letter.field_incoming_letter__user_id
+#: model:ir.model.fields,help:ssi_letter.field_internal_memo__user_id
 #: model:ir.model.fields,help:ssi_letter.field_mixin_letter__user_id
 #: model:ir.model.fields,help:ssi_letter.field_outgoing_letter__user_id
 msgid ""
@@ -844,6 +1008,7 @@ msgstr ""
 
 #. module: ssi_letter
 #: model:ir.model.fields,help:ssi_letter.field_incoming_letter__reviewer_id
+#: model:ir.model.fields,help:ssi_letter.field_internal_memo__reviewer_id
 #: model:ir.model.fields,help:ssi_letter.field_mixin_letter__reviewer_id
 #: model:ir.model.fields,help:ssi_letter.field_outgoing_letter__reviewer_id
 msgid ""
@@ -854,18 +1019,21 @@ msgstr ""
 
 #. module: ssi_letter
 #: model:ir.model.fields,help:ssi_letter.field_incoming_letter__active_approver_user_ids
+#: model:ir.model.fields,help:ssi_letter.field_internal_memo__active_approver_user_ids
 #: model:ir.model.fields,help:ssi_letter.field_outgoing_letter__active_approver_user_ids
 msgid "Users that can approve/reject document"
 msgstr ""
 
 #. module: ssi_letter
 #: model:res.groups,name:ssi_letter.incoming_letter_validator_group
+#: model:res.groups,name:ssi_letter.internal_memo_validator_group
 #: model:res.groups,name:ssi_letter.outgoing_letter_validator_group
 msgid "Validator"
 msgstr ""
 
 #. module: ssi_letter
 #: model:res.groups,name:ssi_letter.incoming_letter_viewer_group
+#: model:res.groups,name:ssi_letter.internal_memo_viewer_group
 #: model:res.groups,name:ssi_letter.outgoing_letter_viewer_group
 msgid "Viewer"
 msgstr ""
