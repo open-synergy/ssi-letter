@@ -5,7 +5,7 @@
 from odoo import fields, models
 
 
-class LetterMixin(models.Model):
+class LetterMixin(models.AbstractModel):
     _name = "mixin.letter"
     _inherit = [
         "mixin.transaction_partner",
