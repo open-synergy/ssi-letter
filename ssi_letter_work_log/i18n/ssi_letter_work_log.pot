@@ -15,24 +15,28 @@ msgstr ""
 
 #. module: ssi_letter_work_log
 #: model:ir.model.fields,field_description:ssi_letter_work_log.field_incoming_letter__allowed_analytic_account_ids
+#: model:ir.model.fields,field_description:ssi_letter_work_log.field_internal_memo__allowed_analytic_account_ids
 #: model:ir.model.fields,field_description:ssi_letter_work_log.field_outgoing_letter__allowed_analytic_account_ids
 msgid "Analytic Accounts"
 msgstr ""
 
 #. module: ssi_letter_work_log
 #: model:ir.model.fields,field_description:ssi_letter_work_log.field_incoming_letter__display_name
+#: model:ir.model.fields,field_description:ssi_letter_work_log.field_internal_memo__display_name
 #: model:ir.model.fields,field_description:ssi_letter_work_log.field_outgoing_letter__display_name
 msgid "Display Name"
 msgstr ""
 
 #. module: ssi_letter_work_log
 #: model:ir.model.fields,field_description:ssi_letter_work_log.field_incoming_letter__excess_work
+#: model:ir.model.fields,field_description:ssi_letter_work_log.field_internal_memo__excess_work
 #: model:ir.model.fields,field_description:ssi_letter_work_log.field_outgoing_letter__excess_work
 msgid "Excess Work"
 msgstr ""
 
 #. module: ssi_letter_work_log
 #: model:ir.model.fields,field_description:ssi_letter_work_log.field_incoming_letter__id
+#: model:ir.model.fields,field_description:ssi_letter_work_log.field_internal_memo__id
 #: model:ir.model.fields,field_description:ssi_letter_work_log.field_outgoing_letter__id
 msgid "ID"
 msgstr ""
@@ -43,7 +47,13 @@ msgid "Incoming Letter"
 msgstr ""
 
 #. module: ssi_letter_work_log
+#: model:ir.model,name:ssi_letter_work_log.model_internal_memo
+msgid "Internal Memo"
+msgstr ""
+
+#. module: ssi_letter_work_log
 #: model:ir.model.fields,field_description:ssi_letter_work_log.field_incoming_letter____last_update
+#: model:ir.model.fields,field_description:ssi_letter_work_log.field_internal_memo____last_update
 #: model:ir.model.fields,field_description:ssi_letter_work_log.field_outgoing_letter____last_update
 msgid "Last Modified on"
 msgstr ""
@@ -55,30 +65,35 @@ msgstr ""
 
 #. module: ssi_letter_work_log
 #: model:ir.model.fields,field_description:ssi_letter_work_log.field_incoming_letter__remaining_work
+#: model:ir.model.fields,field_description:ssi_letter_work_log.field_internal_memo__remaining_work
 #: model:ir.model.fields,field_description:ssi_letter_work_log.field_outgoing_letter__remaining_work
 msgid "Remaining Work"
 msgstr ""
 
 #. module: ssi_letter_work_log
 #: model:ir.model.fields,field_description:ssi_letter_work_log.field_incoming_letter__total_work
+#: model:ir.model.fields,field_description:ssi_letter_work_log.field_internal_memo__total_work
 #: model:ir.model.fields,field_description:ssi_letter_work_log.field_outgoing_letter__total_work
 msgid "Total Work"
 msgstr ""
 
 #. module: ssi_letter_work_log
 #: model:ir.model.fields,field_description:ssi_letter_work_log.field_incoming_letter__work_estimation
+#: model:ir.model.fields,field_description:ssi_letter_work_log.field_internal_memo__work_estimation
 #: model:ir.model.fields,field_description:ssi_letter_work_log.field_outgoing_letter__work_estimation
 msgid "Work Estimation"
 msgstr ""
 
 #. module: ssi_letter_work_log
 #: model:ir.model.fields,field_description:ssi_letter_work_log.field_incoming_letter__work_log_analytic_account_id
+#: model:ir.model.fields,field_description:ssi_letter_work_log.field_internal_memo__work_log_analytic_account_id
 #: model:ir.model.fields,field_description:ssi_letter_work_log.field_outgoing_letter__work_log_analytic_account_id
 msgid "Work Log Analytic Account"
 msgstr ""
 
 #. module: ssi_letter_work_log
 #: model:ir.model.fields,field_description:ssi_letter_work_log.field_incoming_letter__work_log_ids
+#: model:ir.model.fields,field_description:ssi_letter_work_log.field_internal_memo__work_log_ids
 #: model:ir.model.fields,field_description:ssi_letter_work_log.field_outgoing_letter__work_log_ids
 msgid "Work Logs"
 msgstr ""
