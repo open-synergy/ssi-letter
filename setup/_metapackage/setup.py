@@ -9,6 +9,7 @@ setuptools.setup(
     version=version,
     install_requires=[
         'odoo14-addon-ssi_letter',
+        'odoo14-addon-ssi_letter_documenso_signing',
         'odoo14-addon-ssi_letter_operating_unit',
         'odoo14-addon-ssi_letter_work_log',
     ],
