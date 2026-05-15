@@ -1,0 +1,48 @@
+scenarios:
+  - name: "Letter Type - Create and assert fields"
+    steps:
+      - step: "Create letter type"
+        action: "create"
+        model: "letter_type"
+        save_as: "letter_type"
+        values:
+          name: "Test Letter Type"
+          code: "TLT"
+
+      - step: "Assert letter type created"
+        action: "assert"
+        target: "letter_type"
+        asserts:
+          name:
+            type: "value"
+            expected: "Test Letter Type"
+          code:
+            type: "value"
+            expected: "TLT"
+          active:
+            type: "value"
+            expected: true
+
+  - name: "Internal Memo Type - Create and assert fields"
+    steps:
+      - step: "Create internal memo type"
+        action: "create"
+        model: "internal_memo_type"
+        save_as: "memo_type"
+        values:
+          name: "Test Memo Type"
+          code: "TMT"
+
+      - step: "Assert memo type created"
+        action: "assert"
+        target: "memo_type"
+        asserts:
+          name:
+            type: "value"
+            expected: "Test Memo Type"
+          code:
+            type: "value"
+            expected: "TMT"
+          active:
+            type: "value"
+            expected: true
