@@ -1,0 +1,103 @@
+scenarios:
+  - name: "Outgoing Letter - Has work_log_ids field"
+    steps:
+      - step: "Create letter type"
+        action: "create"
+        model: "letter_type"
+        save_as: "letter_type"
+        values:
+          name: "Test Outgoing Letter Type WL"
+          code: "TOLTWL"
+
+      - step: "Get main partner"
+        action: "search"
+        model: "res.partner"
+        domain: [["is_company", "=", true]]
+        limit: 1
+        save_as: "partner"
+
+      - step: "Create outgoing letter"
+        action: "create"
+        model: "outgoing_letter"
+        save_as: "letter"
+        as_user: "base.user_admin"
+        values:
+          type_id: "EVAL: registry['letter_type'].id"
+          date: 2026-01-15
+          title: "Test Outgoing Letter WL"
+          partner_id: "EVAL: registry['partner'].id"
+          internal_partner_id: "EVAL: registry['partner'].id"
+
+      - step: "Assert work_log_ids is empty by default"
+        action: "assert"
+        target: "letter"
+        asserts:
+          work_log_ids:
+            type: "value"
+            operator: "is_falsy"
+
+  - name: "Incoming Letter - Has work_log_ids field"
+    steps:
+      - step: "Create letter type"
+        action: "create"
+        model: "letter_type"
+        save_as: "letter_type"
+        values:
+          name: "Test Incoming Letter Type WL"
+          code: "TILTWL"
+
+      - step: "Get main partner"
+        action: "search"
+        model: "res.partner"
+        domain: [["is_company", "=", true]]
+        limit: 1
+        save_as: "partner"
+
+      - step: "Create incoming letter"
+        action: "create"
+        model: "incoming_letter"
+        save_as: "letter"
+        as_user: "base.user_admin"
+        values:
+          type_id: "EVAL: registry['letter_type'].id"
+          date: 2026-01-15
+          title: "Test Incoming Letter WL"
+          partner_id: "EVAL: registry['partner'].id"
+          internal_partner_id: "EVAL: registry['partner'].id"
+
+      - step: "Assert work_log_ids is empty by default"
+        action: "assert"
+        target: "letter"
+        asserts:
+          work_log_ids:
+            type: "value"
+            operator: "is_falsy"
+
+  - name: "Internal Memo - Has work_log_ids field"
+    steps:
+      - step: "Create internal memo type"
+        action: "create"
+        model: "internal_memo_type"
+        save_as: "memo_type"
+        values:
+          name: "Test Internal Memo Type WL"
+          code: "TIMTWL"
+
+      - step: "Create internal memo"
+        action: "create"
+        model: "internal_memo"
+        save_as: "memo"
+        as_user: "base.user_admin"
+        values:
+          type_id: "EVAL: registry['memo_type'].id"
+          date: 2026-01-15
+          title: "Test Internal Memo WL"
+          memo: "Test memo content work log"
+
+      - step: "Assert work_log_ids is empty by default"
+        action: "assert"
+        target: "memo"
+        asserts:
+          work_log_ids:
+            type: "value"
+            operator: "is_falsy"
