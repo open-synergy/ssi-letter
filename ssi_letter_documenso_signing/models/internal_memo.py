@@ -9,7 +9,7 @@ class InternalMemo(models.Model):
     _name = "internal_memo"
     _inherit = [
         "internal_memo",
-        "mixin.documenso_signing",
+        "mixin.documenso_signing_approval",
     ]
 
     _documenso_signing_create_page = True

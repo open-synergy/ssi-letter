@@ -9,7 +9,7 @@ class IncomingLetter(models.Model):
     _name = "incoming_letter"
     _inherit = [
         "incoming_letter",
-        "mixin.documenso_signing",
+        "mixin.documenso_signing_approval",
     ]
 
     _documenso_signing_create_page = True
