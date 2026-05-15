@@ -1,0 +1,98 @@
+scenarios:
+  - name: "Internal Memo - Full Workflow: draft to done"
+    steps:
+      - step: "Create internal memo type"
+        action: "create"
+        model: "internal_memo_type"
+        save_as: "memo_type"
+        values:
+          name: "Test Internal Memo Type"
+          code: "TIMT"
+
+      - step: "Create internal memo"
+        action: "create"
+        model: "internal_memo"
+        save_as: "memo"
+        as_user: "base.user_admin"
+        values:
+          type_id: "EVAL: registry['memo_type'].id"
+          date: 2026-01-15
+          title: "Test Internal Memo"
+          memo: "Test memo content"
+
+      - step: "Assert created in draft"
+        action: "assert"
+        target: "memo"
+        asserts:
+          state:
+            type: "value"
+            expected: "draft"
+
+      - step: "Confirm internal memo"
+        action: "call"
+        target: "memo"
+        method: "action_confirm"
+        as_user: "base.user_admin"
+        asserts:
+          state:
+            type: "value"
+            expected: "confirm"
+
+      - step: "Invalidate cache after confirm"
+        action: "call"
+        target: "memo"
+        method: "invalidate_cache"
+
+      - step: "Approve internal memo"
+        action: "call"
+        target: "memo"
+        method: "action_approve_approval"
+        as_user: "base.user_admin"
+        asserts:
+          state:
+            type: "value"
+            expected: "done"
+
+  - name: "Internal Memo - Restart from confirm state"
+    steps:
+      - step: "Create internal memo type"
+        action: "create"
+        model: "internal_memo_type"
+        save_as: "memo_type"
+        values:
+          name: "Test Internal Memo Type Restart"
+          code: "TIMTR"
+
+      - step: "Create internal memo"
+        action: "create"
+        model: "internal_memo"
+        save_as: "memo"
+        as_user: "base.user_admin"
+        values:
+          type_id: "EVAL: registry['memo_type'].id"
+          date: 2026-01-15
+          title: "Test Internal Memo Restart"
+          memo: "Test memo content restart"
+
+      - step: "Confirm internal memo"
+        action: "call"
+        target: "memo"
+        method: "action_confirm"
+        as_user: "base.user_admin"
+
+      - step: "Invalidate cache after confirm"
+        action: "call"
+        target: "memo"
+        method: "invalidate_cache"
+
+      - step: "Restart internal memo"
+        action: "call"
+        target: "memo"
+        method: "action_restart"
+        as_user: "base.user_admin"
+        context:
+          bypass_policy_check: true
+        asserts:
+          state:
+            type: "value"
+            expected: "draft"

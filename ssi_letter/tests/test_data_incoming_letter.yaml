@@ -1,0 +1,114 @@
+scenarios:
+  - name: "Incoming Letter - Full Workflow: draft to done"
+    steps:
+      - step: "Create letter type"
+        action: "create"
+        model: "letter_type"
+        save_as: "letter_type"
+        values:
+          name: "Test Incoming Letter Type"
+          code: "TILT"
+
+      - step: "Get main partner"
+        action: "search"
+        model: "res.partner"
+        domain: [["is_company", "=", true]]
+        limit: 1
+        save_as: "partner"
+
+      - step: "Create incoming letter"
+        action: "create"
+        model: "incoming_letter"
+        save_as: "letter"
+        as_user: "base.user_admin"
+        values:
+          type_id: "EVAL: registry['letter_type'].id"
+          date: 2026-01-15
+          title: "Test Incoming Letter"
+          partner_id: "EVAL: registry['partner'].id"
+          internal_partner_id: "EVAL: registry['partner'].id"
+
+      - step: "Assert created in draft"
+        action: "assert"
+        target: "letter"
+        asserts:
+          state:
+            type: "value"
+            expected: "draft"
+
+      - step: "Confirm incoming letter"
+        action: "call"
+        target: "letter"
+        method: "action_confirm"
+        as_user: "base.user_admin"
+        asserts:
+          state:
+            type: "value"
+            expected: "confirm"
+
+      - step: "Invalidate cache after confirm"
+        action: "call"
+        target: "letter"
+        method: "invalidate_cache"
+
+      - step: "Approve incoming letter"
+        action: "call"
+        target: "letter"
+        method: "action_approve_approval"
+        as_user: "base.user_admin"
+        asserts:
+          state:
+            type: "value"
+            expected: "done"
+
+  - name: "Incoming Letter - Restart from confirm state"
+    steps:
+      - step: "Create letter type"
+        action: "create"
+        model: "letter_type"
+        save_as: "letter_type"
+        values:
+          name: "Test Incoming Letter Type Restart"
+          code: "TILTR"
+
+      - step: "Get main partner"
+        action: "search"
+        model: "res.partner"
+        domain: [["is_company", "=", true]]
+        limit: 1
+        save_as: "partner"
+
+      - step: "Create incoming letter"
+        action: "create"
+        model: "incoming_letter"
+        save_as: "letter"
+        as_user: "base.user_admin"
+        values:
+          type_id: "EVAL: registry['letter_type'].id"
+          date: 2026-01-15
+          title: "Test Incoming Letter Restart"
+          partner_id: "EVAL: registry['partner'].id"
+          internal_partner_id: "EVAL: registry['partner'].id"
+
+      - step: "Confirm incoming letter"
+        action: "call"
+        target: "letter"
+        method: "action_confirm"
+        as_user: "base.user_admin"
+
+      - step: "Invalidate cache after confirm"
+        action: "call"
+        target: "letter"
+        method: "invalidate_cache"
+
+      - step: "Restart incoming letter"
+        action: "call"
+        target: "letter"
+        method: "action_restart"
+        as_user: "base.user_admin"
+        context:
+          bypass_policy_check: true
+        asserts:
+          state:
+            type: "value"
+            expected: "draft"

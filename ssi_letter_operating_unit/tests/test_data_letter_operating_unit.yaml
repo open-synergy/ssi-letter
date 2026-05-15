@@ -1,0 +1,74 @@
+scenarios:
+  - name: "Outgoing Letter - Has operating_unit_id field"
+    steps:
+      - step: "Create letter type"
+        action: "create"
+        model: "letter_type"
+        save_as: "letter_type"
+        values:
+          name: "Test Outgoing Letter Type OU"
+          code: "TOLTOU"
+
+      - step: "Get main partner"
+        action: "search"
+        model: "res.partner"
+        domain: [["is_company", "=", true]]
+        limit: 1
+        save_as: "partner"
+
+      - step: "Create outgoing letter"
+        action: "create"
+        model: "outgoing_letter"
+        save_as: "letter"
+        as_user: "base.user_admin"
+        values:
+          type_id: "EVAL: registry['letter_type'].id"
+          date: 2026-01-15
+          title: "Test Outgoing Letter OU"
+          partner_id: "EVAL: registry['partner'].id"
+          internal_partner_id: "EVAL: registry['partner'].id"
+
+      - step: "Assert outgoing letter has id"
+        action: "assert"
+        target: "letter"
+        asserts:
+          id:
+            type: "value"
+            operator: "is_truthy"
+
+  - name: "Incoming Letter - Has operating_unit_id field"
+    steps:
+      - step: "Create letter type"
+        action: "create"
+        model: "letter_type"
+        save_as: "letter_type"
+        values:
+          name: "Test Incoming Letter Type OU"
+          code: "TILTOU"
+
+      - step: "Get main partner"
+        action: "search"
+        model: "res.partner"
+        domain: [["is_company", "=", true]]
+        limit: 1
+        save_as: "partner"
+
+      - step: "Create incoming letter"
+        action: "create"
+        model: "incoming_letter"
+        save_as: "letter"
+        as_user: "base.user_admin"
+        values:
+          type_id: "EVAL: registry['letter_type'].id"
+          date: 2026-01-15
+          title: "Test Incoming Letter OU"
+          partner_id: "EVAL: registry['partner'].id"
+          internal_partner_id: "EVAL: registry['partner'].id"
+
+      - step: "Assert incoming letter has id"
+        action: "assert"
+        target: "letter"
+        asserts:
+          id:
+            type: "value"
+            operator: "is_truthy"

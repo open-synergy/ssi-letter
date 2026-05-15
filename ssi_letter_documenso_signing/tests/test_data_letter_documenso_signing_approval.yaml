@@ -1,0 +1,146 @@
+scenarios:
+  - name: "Outgoing Letter has approval_signature_request_id field"
+    steps:
+      - step: "Create letter type"
+        action: "create"
+        model: "letter_type"
+        save_as: "letter_type"
+        values:
+          name: "Test Letter Type"
+          code: "TLT"
+
+      - step: "Get main partner"
+        action: "search"
+        model: "res.partner"
+        domain: [["is_company", "=", true]]
+        limit: 1
+        save_as: "partner"
+
+      - step: "Create outgoing letter"
+        action: "create"
+        model: "outgoing_letter"
+        save_as: "outgoing_letter"
+        values:
+          type_id: "EVAL: registry['letter_type'].id"
+          date: 2026-01-15
+          title: "Test Outgoing Letter"
+          partner_id: "EVAL: registry['partner'].id"
+          internal_partner_id: "EVAL: registry['partner'].id"
+
+      - step: "Assert approval_signature_request_id is falsy by default"
+        action: "assert"
+        target: "outgoing_letter"
+        asserts:
+          approval_signature_request_id:
+            type: "value"
+            operator: "is_falsy"
+
+  - name: "Incoming Letter has approval_signature_request_id field"
+    steps:
+      - step: "Create letter type"
+        action: "create"
+        model: "letter_type"
+        save_as: "letter_type"
+        values:
+          name: "Test Incoming Letter Type"
+          code: "TILT"
+
+      - step: "Get main partner"
+        action: "search"
+        model: "res.partner"
+        domain: [["is_company", "=", true]]
+        limit: 1
+        save_as: "partner"
+
+      - step: "Create incoming letter"
+        action: "create"
+        model: "incoming_letter"
+        save_as: "incoming_letter"
+        values:
+          type_id: "EVAL: registry['letter_type'].id"
+          date: 2026-01-15
+          title: "Test Incoming Letter"
+          partner_id: "EVAL: registry['partner'].id"
+          internal_partner_id: "EVAL: registry['partner'].id"
+
+      - step: "Assert approval_signature_request_id is falsy by default"
+        action: "assert"
+        target: "incoming_letter"
+        asserts:
+          approval_signature_request_id:
+            type: "value"
+            operator: "is_falsy"
+
+  - name: "Internal Memo has approval_signature_request_id field"
+    steps:
+      - step: "Create internal memo type"
+        action: "create"
+        model: "internal_memo_type"
+        save_as: "memo_type"
+        values:
+          name: "Test Memo Type"
+          code: "TMT"
+
+      - step: "Create internal memo"
+        action: "create"
+        model: "internal_memo"
+        save_as: "internal_memo"
+        values:
+          type_id: "EVAL: registry['memo_type'].id"
+          date: 2026-01-15
+          title: "Test Internal Memo"
+          memo: "Test memo content"
+
+      - step: "Assert approval_signature_request_id is falsy by default"
+        action: "assert"
+        target: "internal_memo"
+        asserts:
+          approval_signature_request_id:
+            type: "value"
+            operator: "is_falsy"
+
+  - name:
+      "Outgoing Letter - use_documenso_approval returns False without signing template"
+    steps:
+      - step: "Create letter type"
+        action: "create"
+        model: "letter_type"
+        save_as: "letter_type"
+        values:
+          name: "Test Letter Type ND"
+          code: "TLTND"
+
+      - step: "Get main partner"
+        action: "search"
+        model: "res.partner"
+        domain: [["is_company", "=", true]]
+        limit: 1
+        save_as: "partner"
+
+      - step: "Create outgoing letter"
+        action: "create"
+        model: "outgoing_letter"
+        save_as: "letter"
+        values:
+          type_id: "EVAL: registry['letter_type'].id"
+          date: 2026-01-15
+          title: "Test No Documenso Template"
+          partner_id: "EVAL: registry['partner'].id"
+          internal_partner_id: "EVAL: registry['partner'].id"
+
+      - step: "Assert no approval template set"
+        action: "assert"
+        target: "letter"
+        asserts:
+          approval_template_id:
+            type: "value"
+            operator: "is_falsy"
+
+      - step: "Assert signature_request_ids is empty"
+        action: "assert"
+        target: "letter"
+        asserts:
+          signature_request_ids:
+            type: "o2m"
+            check: "count"
+            expected_count: 0
