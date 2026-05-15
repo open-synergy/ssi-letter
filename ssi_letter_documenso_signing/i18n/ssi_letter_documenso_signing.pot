@@ -14,6 +14,62 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: ssi_letter_documenso_signing
+#: model:ir.model.fields,field_description:ssi_letter_documenso_signing.field_incoming_letter__active_approval_ids
+#: model:ir.model.fields,field_description:ssi_letter_documenso_signing.field_internal_memo__active_approval_ids
+#: model:ir.model.fields,field_description:ssi_letter_documenso_signing.field_outgoing_letter__active_approval_ids
+msgid "Active Approvals"
+msgstr ""
+
+#. module: ssi_letter_documenso_signing
+#: model:ir.model.fields,field_description:ssi_letter_documenso_signing.field_incoming_letter__active_approver_partner_ids
+#: model:ir.model.fields,field_description:ssi_letter_documenso_signing.field_internal_memo__active_approver_partner_ids
+#: model:ir.model.fields,field_description:ssi_letter_documenso_signing.field_outgoing_letter__active_approver_partner_ids
+msgid "Active Partners"
+msgstr ""
+
+#. module: ssi_letter_documenso_signing
+#: model:ir.model.fields,field_description:ssi_letter_documenso_signing.field_incoming_letter__active_approver_user_ids
+#: model:ir.model.fields,field_description:ssi_letter_documenso_signing.field_internal_memo__active_approver_user_ids
+#: model:ir.model.fields,field_description:ssi_letter_documenso_signing.field_outgoing_letter__active_approver_user_ids
+msgid "Active Users"
+msgstr ""
+
+#. module: ssi_letter_documenso_signing
+#: model:ir.model.fields,help:ssi_letter_documenso_signing.field_incoming_letter__approval_template_id
+#: model:ir.model.fields,help:ssi_letter_documenso_signing.field_internal_memo__approval_template_id
+#: model:ir.model.fields,help:ssi_letter_documenso_signing.field_outgoing_letter__approval_template_id
+msgid "Approval Configuration"
+msgstr ""
+
+#. module: ssi_letter_documenso_signing
+#: model:ir.model.fields,field_description:ssi_letter_documenso_signing.field_incoming_letter__approval_signature_request_id
+#: model:ir.model.fields,field_description:ssi_letter_documenso_signing.field_internal_memo__approval_signature_request_id
+#: model:ir.model.fields,field_description:ssi_letter_documenso_signing.field_outgoing_letter__approval_signature_request_id
+msgid "Approval Signature Request"
+msgstr ""
+
+#. module: ssi_letter_documenso_signing
+#: model:ir.model.fields,field_description:ssi_letter_documenso_signing.field_incoming_letter__approval_template_id
+#: model:ir.model.fields,field_description:ssi_letter_documenso_signing.field_internal_memo__approval_template_id
+#: model:ir.model.fields,field_description:ssi_letter_documenso_signing.field_outgoing_letter__approval_template_id
+msgid "Approval Template"
+msgstr ""
+
+#. module: ssi_letter_documenso_signing
+#: model:ir.model.fields,field_description:ssi_letter_documenso_signing.field_incoming_letter__approval_ids
+#: model:ir.model.fields,field_description:ssi_letter_documenso_signing.field_internal_memo__approval_ids
+#: model:ir.model.fields,field_description:ssi_letter_documenso_signing.field_outgoing_letter__approval_ids
+msgid "Approvals"
+msgstr ""
+
+#. module: ssi_letter_documenso_signing
+#: model:ir.model.fields,field_description:ssi_letter_documenso_signing.field_incoming_letter__approved
+#: model:ir.model.fields,field_description:ssi_letter_documenso_signing.field_internal_memo__approved
+#: model:ir.model.fields,field_description:ssi_letter_documenso_signing.field_outgoing_letter__approved
+msgid "Approved"
+msgstr ""
+
+#. module: ssi_letter_documenso_signing
 #: model:ir.model.fields,field_description:ssi_letter_documenso_signing.field_incoming_letter__display_name
 #: model:ir.model.fields,field_description:ssi_letter_documenso_signing.field_internal_memo__display_name
 #: model:ir.model.fields,field_description:ssi_letter_documenso_signing.field_outgoing_letter__display_name
@@ -45,6 +101,20 @@ msgid "Last Modified on"
 msgstr ""
 
 #. module: ssi_letter_documenso_signing
+#: model:ir.model.fields,field_description:ssi_letter_documenso_signing.field_incoming_letter__need_validation
+#: model:ir.model.fields,field_description:ssi_letter_documenso_signing.field_internal_memo__need_validation
+#: model:ir.model.fields,field_description:ssi_letter_documenso_signing.field_outgoing_letter__need_validation
+msgid "Need Validation"
+msgstr ""
+
+#. module: ssi_letter_documenso_signing
+#: model:ir.model.fields,field_description:ssi_letter_documenso_signing.field_incoming_letter__next_approval_ids
+#: model:ir.model.fields,field_description:ssi_letter_documenso_signing.field_internal_memo__next_approval_ids
+#: model:ir.model.fields,field_description:ssi_letter_documenso_signing.field_outgoing_letter__next_approval_ids
+msgid "Next Approvals"
+msgstr ""
+
+#. module: ssi_letter_documenso_signing
 #: model:ir.model.fields,field_description:ssi_letter_documenso_signing.field_incoming_letter__signature_request_count
 #: model:ir.model.fields,field_description:ssi_letter_documenso_signing.field_internal_memo__signature_request_count
 #: model:ir.model.fields,field_description:ssi_letter_documenso_signing.field_outgoing_letter__signature_request_count
@@ -57,8 +127,32 @@ msgid "Outgoing Letter"
 msgstr ""
 
 #. module: ssi_letter_documenso_signing
+#: model:ir.model.fields,field_description:ssi_letter_documenso_signing.field_incoming_letter__rejected
+#: model:ir.model.fields,field_description:ssi_letter_documenso_signing.field_internal_memo__rejected
+#: model:ir.model.fields,field_description:ssi_letter_documenso_signing.field_outgoing_letter__rejected
+msgid "Rejected"
+msgstr ""
+
+#. module: ssi_letter_documenso_signing
 #: model:ir.model.fields,field_description:ssi_letter_documenso_signing.field_incoming_letter__signature_request_ids
 #: model:ir.model.fields,field_description:ssi_letter_documenso_signing.field_internal_memo__signature_request_ids
 #: model:ir.model.fields,field_description:ssi_letter_documenso_signing.field_outgoing_letter__signature_request_ids
 msgid "Signature Requests"
+msgstr ""
+
+#. module: ssi_letter_documenso_signing
+#: model:ir.model.fields,help:ssi_letter_documenso_signing.field_incoming_letter__approval_signature_request_id
+#: model:ir.model.fields,help:ssi_letter_documenso_signing.field_internal_memo__approval_signature_request_id
+#: model:ir.model.fields,help:ssi_letter_documenso_signing.field_outgoing_letter__approval_signature_request_id
+msgid ""
+"The specific signature request used to determine approval status. Set "
+"automatically when the approval template uses a Documenso signing template. "
+"Other signature requests on this document are not affected."
+msgstr ""
+
+#. module: ssi_letter_documenso_signing
+#: model:ir.model.fields,help:ssi_letter_documenso_signing.field_incoming_letter__active_approver_user_ids
+#: model:ir.model.fields,help:ssi_letter_documenso_signing.field_internal_memo__active_approver_user_ids
+#: model:ir.model.fields,help:ssi_letter_documenso_signing.field_outgoing_letter__active_approver_user_ids
+msgid "Users that can approve/reject document"
 msgstr ""
