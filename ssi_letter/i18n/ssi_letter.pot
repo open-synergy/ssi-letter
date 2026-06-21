@@ -311,6 +311,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__contact_partner_id
 #: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__contact_partner_id
 #: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__contact_partner_id
+#: model_terms:ir.ui.view,arch_db:ssi_letter.letter_mixin_view_search
 msgid "Contact"
 msgstr ""
 
@@ -344,6 +345,8 @@ msgstr ""
 #: model:ir.model.fields,field_description:ssi_letter.field_internal_memo__date
 #: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__date
 #: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__date
+#: model_terms:ir.ui.view,arch_db:ssi_letter.internal_memo_view_search
+#: model_terms:ir.ui.view,arch_db:ssi_letter.letter_mixin_view_search
 msgid "Date"
 msgstr ""
 
@@ -512,6 +515,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__internal_partner_id
 #: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__internal_partner_id
 #: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__internal_partner_id
+#: model_terms:ir.ui.view,arch_db:ssi_letter.letter_mixin_view_search
 msgid "Internal Partner"
 msgstr ""
 
@@ -592,6 +596,7 @@ msgstr ""
 #. module: ssi_letter
 #: model:ir.model,name:ssi_letter.model_letter_type
 #: model:res.groups,name:ssi_letter.letter_type_group
+#: model_terms:ir.ui.view,arch_db:ssi_letter.letter_mixin_view_search
 msgid "Letter Type"
 msgstr ""
 
@@ -809,6 +814,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__partner_id
 #: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__partner_id
 #: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__partner_id
+#: model_terms:ir.ui.view,arch_db:ssi_letter.letter_mixin_view_search
 msgid "Partner"
 msgstr ""
 
@@ -953,6 +959,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:ssi_letter.field_internal_memo__type_id
 #: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__type_id
 #: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__type_id
+#: model_terms:ir.ui.view,arch_db:ssi_letter.internal_memo_view_search
 msgid "Type"
 msgstr ""
 
