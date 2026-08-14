@@ -7,6 +7,14 @@ Letter Management - Documenso Signing Integration
 =====================================================
 
 
+Work Instruction
+================
+
+* `Approve Outgoing Letter <docs/outgoing_letter/index.html>`_
+* `Approve Incoming Letter <docs/incoming_letter/index.html>`_
+* `Approve Internal Memo <docs/internal_memo/index.html>`_
+
+
 Installation
 ============
 
