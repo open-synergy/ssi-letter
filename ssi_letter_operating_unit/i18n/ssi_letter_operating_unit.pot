@@ -15,12 +15,14 @@ msgstr ""
 
 #. module: ssi_letter_operating_unit
 #: model:ir.model.fields,field_description:ssi_letter_operating_unit.field_incoming_letter__display_name
+#: model:ir.model.fields,field_description:ssi_letter_operating_unit.field_internal_memo__display_name
 #: model:ir.model.fields,field_description:ssi_letter_operating_unit.field_outgoing_letter__display_name
 msgid "Display Name"
 msgstr ""
 
 #. module: ssi_letter_operating_unit
 #: model:ir.model.fields,field_description:ssi_letter_operating_unit.field_incoming_letter__id
+#: model:ir.model.fields,field_description:ssi_letter_operating_unit.field_internal_memo__id
 #: model:ir.model.fields,field_description:ssi_letter_operating_unit.field_outgoing_letter__id
 msgid "ID"
 msgstr ""
@@ -31,17 +33,26 @@ msgid "Incoming Letter"
 msgstr ""
 
 #. module: ssi_letter_operating_unit
+#: model:ir.model,name:ssi_letter_operating_unit.model_internal_memo
+msgid "Internal Memo"
+msgstr ""
+
+#. module: ssi_letter_operating_unit
 #: model:ir.model.fields,field_description:ssi_letter_operating_unit.field_incoming_letter____last_update
+#: model:ir.model.fields,field_description:ssi_letter_operating_unit.field_internal_memo____last_update
 #: model:ir.model.fields,field_description:ssi_letter_operating_unit.field_outgoing_letter____last_update
 msgid "Last Modified on"
 msgstr ""
 
 #. module: ssi_letter_operating_unit
 #: model:ir.model.fields,field_description:ssi_letter_operating_unit.field_incoming_letter__operating_unit_id
+#: model:ir.model.fields,field_description:ssi_letter_operating_unit.field_internal_memo__operating_unit_id
 #: model:ir.model.fields,field_description:ssi_letter_operating_unit.field_outgoing_letter__operating_unit_id
 #: model:res.groups,name:ssi_letter_operating_unit.incoming_letter_ou_group
+#: model:res.groups,name:ssi_letter_operating_unit.internal_memo_ou_group
 #: model:res.groups,name:ssi_letter_operating_unit.outgoing_letter_ou_group
 #: model_terms:ir.ui.view,arch_db:ssi_letter_operating_unit.incoming_letter_view_search
+#: model_terms:ir.ui.view,arch_db:ssi_letter_operating_unit.internal_memo_view_search
 #: model_terms:ir.ui.view,arch_db:ssi_letter_operating_unit.outgoing_letter_view_search
 msgid "Operating Unit"
 msgstr ""
