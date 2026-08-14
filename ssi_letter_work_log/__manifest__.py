@@ -12,8 +12,11 @@
     "depends": [
         "ssi_letter",
         "ssi_work_log_mixin",
+        "web_tour",
     ],
-    "data": [],
+    "data": [
+        "views/assets.xml",
+    ],
     "demo": [],
     "images": [],
 }
