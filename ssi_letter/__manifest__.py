@@ -17,6 +17,7 @@
         "ssi_transaction_open_mixin",
         "ssi_transaction_cancel_mixin",
         "ssi_transaction_partner_mixin",
+        "web_tour",
     ],
     "data": [
         "security/ir_module_category/ir_module_category.xml",
@@ -55,6 +56,7 @@
         "views/outgoing_letter_views.xml",
         "views/incoming_letter_views.xml",
         "views/internal_memo.xml",
+        "views/assets.xml",
     ],
     "images": [],
 }
