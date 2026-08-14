@@ -5,7 +5,7 @@
 from odoo import fields, models
 
 
-class LetterMixin(models.AbstractModel):
+class MixinLetter(models.AbstractModel):
     """
     Common fields shared by every kind of letter document.
     Provides the type, date, title, courier, and partner fields that
