@@ -6,6 +6,14 @@ from odoo import models
 
 
 class InternalMemo(models.Model):
+    """Enable Documenso-based approval signing for internal memos.
+
+    Extends ``internal_memo`` with ``mixin.documenso_signing_approval``
+    and turns on the Documenso Signing form tab, so an approval template
+    with a Documenso signing template routes approval through a single
+    ``documenso.signature.request`` instead of standard approval records.
+    """
+
     _name = "internal_memo"
     _inherit = [
         "internal_memo",
