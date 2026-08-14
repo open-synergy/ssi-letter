@@ -4,7 +4,7 @@
 # pylint: disable=C8101
 {
     "name": "Letter Management",
-    "version": "14.0.1.8.2",
+    "version": "14.0.1.8.3",
     "contributors": ["Andhitia Rama <andhitia.r@gmail.com>"],
     "website": "https://simetri-sinergi.id",
     "author": "PT. Simetri Sinergi Indonesia, OpenSynergy Indonesia",
