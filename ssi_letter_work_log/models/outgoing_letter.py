@@ -6,6 +6,15 @@ from odoo import models
 
 
 class OutgoingLetter(models.Model):
+    """
+    Enables work hour logging on outgoing letter documents.
+
+    Adds the ``mixin.work_object`` capability to ``outgoing_letter`` so
+    users can record work log entries (``hr.work_log``) against a
+    letter, track estimated vs. realized work, and link entries to an
+    analytic account.
+    """
+
     _name = "outgoing_letter"
     _inherit = [
         "outgoing_letter",

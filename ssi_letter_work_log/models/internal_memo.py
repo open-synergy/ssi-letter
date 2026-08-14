@@ -6,6 +6,15 @@ from odoo import models
 
 
 class InternalMemo(models.Model):
+    """
+    Enables work hour logging on internal memo documents.
+
+    Adds the ``mixin.work_object`` capability to ``internal_memo`` so
+    users can record work log entries (``hr.work_log``) against a
+    memo, track estimated vs. realized work, and link entries to an
+    analytic account.
+    """
+
     _name = "internal_memo"
     _inherit = [
         "internal_memo",
