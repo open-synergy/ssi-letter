@@ -7,6 +7,13 @@ Letter Management + Operating Unit Integration
 ==============================================
 
 
+Work Instruction
+================
+
+* `Create Outgoing Letter <docs/outgoing_letter/index.html>`_
+* `Create Incoming Letter <docs/incoming_letter/index.html>`_
+
+
 Installation
 ============
 
