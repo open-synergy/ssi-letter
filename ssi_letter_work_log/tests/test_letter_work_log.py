@@ -9,5 +9,14 @@ from odoo.tests import tagged
 
 @tagged("post_install", "-at_install")
 class TestLetterWorkLog(YamlTransactionCase):
+    """
+    Test work log field exposure on incoming/outgoing letter and memo.
+
+    Covers ``outgoing_letter``, ``incoming_letter``, and
+    ``internal_memo``, asserting each exposes an empty
+    ``work_log_ids`` field by default after creation.
+    """
+
     def test_letter_work_log(self):
+        """Run the work log scenarios for letter and memo documents."""
         self.run_yaml_scenario("test_data_letter_work_log.yaml")
