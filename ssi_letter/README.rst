@@ -7,6 +7,52 @@ Letter Management
 =================
 
 
+Work Instruction
+================
+
+* `Create Letter Type <docs/letter_type/index.html>`_
+* `Edit Letter Type <docs/letter_type/index.html>`_
+* `Delete Letter Type <docs/letter_type/index.html>`_
+* `Deactivate Letter Type <docs/letter_type/index.html>`_
+* `Activate Letter Type <docs/letter_type/index.html>`_
+* `Create Internal Memo Type <docs/internal_memo_type/index.html>`_
+* `Edit Internal Memo Type <docs/internal_memo_type/index.html>`_
+* `Delete Internal Memo Type <docs/internal_memo_type/index.html>`_
+* `Deactivate Internal Memo Type <docs/internal_memo_type/index.html>`_
+* `Activate Internal Memo Type <docs/internal_memo_type/index.html>`_
+* `Create Outgoing Letter <docs/outgoing_letter/index.html>`_
+* `Edit Outgoing Letter <docs/outgoing_letter/index.html>`_
+* `Delete Outgoing Letter <docs/outgoing_letter/index.html>`_
+* `Confirm Outgoing Letter <docs/outgoing_letter/index.html>`_
+* `Approve Outgoing Letter <docs/outgoing_letter/index.html>`_
+* `Reject Outgoing Letter <docs/outgoing_letter/index.html>`_
+* `Finish Outgoing Letter <docs/outgoing_letter/index.html>`_
+* `Cancel Outgoing Letter <docs/outgoing_letter/index.html>`_
+* `Restart Outgoing Letter <docs/outgoing_letter/index.html>`_
+* `Reset Document Number — Outgoing Letter <docs/outgoing_letter/index.html>`_
+* `Restart Approval Process — Outgoing Letter <docs/outgoing_letter/index.html>`_
+* `Create Incoming Letter <docs/incoming_letter/index.html>`_
+* `Edit Incoming Letter <docs/incoming_letter/index.html>`_
+* `Delete Incoming Letter <docs/incoming_letter/index.html>`_
+* `Confirm Incoming Letter <docs/incoming_letter/index.html>`_
+* `Approve Incoming Letter <docs/incoming_letter/index.html>`_
+* `Reject Incoming Letter <docs/incoming_letter/index.html>`_
+* `Cancel Incoming Letter <docs/incoming_letter/index.html>`_
+* `Restart Incoming Letter <docs/incoming_letter/index.html>`_
+* `Reset Document Number — Incoming Letter <docs/incoming_letter/index.html>`_
+* `Restart Approval Process — Incoming Letter <docs/incoming_letter/index.html>`_
+* `Create Internal Memo <docs/internal_memo/index.html>`_
+* `Edit Internal Memo <docs/internal_memo/index.html>`_
+* `Delete Internal Memo <docs/internal_memo/index.html>`_
+* `Confirm Internal Memo <docs/internal_memo/index.html>`_
+* `Approve Internal Memo <docs/internal_memo/index.html>`_
+* `Reject Internal Memo <docs/internal_memo/index.html>`_
+* `Cancel Internal Memo <docs/internal_memo/index.html>`_
+* `Restart Internal Memo <docs/internal_memo/index.html>`_
+* `Reset Document Number — Internal Memo <docs/internal_memo/index.html>`_
+* `Restart Approval Process — Internal Memo <docs/internal_memo/index.html>`_
+
+
 Installation
 ============
 
