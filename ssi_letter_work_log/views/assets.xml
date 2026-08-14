@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2026 OpenSynergy Indonesia
+     Copyright 2026 PT. Simetri Sinergi Indonesia
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <template
+        id="assets_tests"
+        name="ssi_letter_work_log assets tests"
+        inherit_id="web.assets_tests"
+    >
+        <xpath expr="." position="inside">
+            <script
+                type="text/javascript"
+                src="/ssi_letter_work_log/static/tests/tours/outgoing_letter_tour.js"
+            />
+            <script
+                type="text/javascript"
+                src="/ssi_letter_work_log/static/tests/tours/incoming_letter_tour.js"
+            />
+            <script
+                type="text/javascript"
+                src="/ssi_letter_work_log/static/tests/tours/internal_memo_tour.js"
+            />
+        </xpath>
+    </template>
+</odoo>

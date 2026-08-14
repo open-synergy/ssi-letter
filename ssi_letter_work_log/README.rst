@@ -7,6 +7,14 @@ Letter Management - Work Log Integration
 ========================================
 
 
+Work Instruction
+================
+
+* `Approve Outgoing Letter <docs/outgoing_letter/index.html>`_
+* `Create Incoming Letter <docs/incoming_letter/index.html>`_
+* `Create Internal Memo <docs/internal_memo/index.html>`_
+
+
 Installation
 ============
 
