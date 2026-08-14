@@ -21,7 +21,7 @@ addon | version | maintainers | summary
 [ssi_letter](ssi_letter/) | 14.0.1.8.3 |  | Letter Management
 [ssi_letter_documenso_signing](ssi_letter_documenso_signing/) | 14.0.1.2.1 |  | Letter Management - Documenso Signing Integration
 [ssi_letter_operating_unit](ssi_letter_operating_unit/) | 14.0.1.3.1 |  | Letter Management + Operating Unit Integration
-[ssi_letter_work_log](ssi_letter_work_log/) | 14.0.1.3.0 |  | Letter Management - Work Log Integration
+[ssi_letter_work_log](ssi_letter_work_log/) | 14.0.1.3.1 |  | Letter Management - Work Log Integration
 
 [//]: # (end addons)
 
