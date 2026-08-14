@@ -1,3 +1,6 @@
+options:
+  auto_refresh: true
+
 scenarios:
   - name: "Internal Memo - Full Workflow: draft to done"
     steps:
@@ -38,11 +41,6 @@ scenarios:
             type: "value"
             expected: "confirm"
 
-      - step: "Invalidate cache after confirm"
-        action: "call"
-        target: "memo"
-        method: "invalidate_cache"
-
       - step: "Approve internal memo"
         action: "call"
         target: "memo"
@@ -79,11 +77,6 @@ scenarios:
         target: "memo"
         method: "action_confirm"
         as_user: "base.user_admin"
-
-      - step: "Invalidate cache after confirm"
-        action: "call"
-        target: "memo"
-        method: "invalidate_cache"
 
       - step: "Restart internal memo"
         action: "call"

@@ -1,3 +1,6 @@
+options:
+  auto_refresh: true
+
 scenarios:
   - name: "Incoming Letter - Full Workflow: draft to done"
     steps:
@@ -46,11 +49,6 @@ scenarios:
             type: "value"
             expected: "confirm"
 
-      - step: "Invalidate cache after confirm"
-        action: "call"
-        target: "letter"
-        method: "invalidate_cache"
-
       - step: "Approve incoming letter"
         action: "call"
         target: "letter"
@@ -95,11 +93,6 @@ scenarios:
         target: "letter"
         method: "action_confirm"
         as_user: "base.user_admin"
-
-      - step: "Invalidate cache after confirm"
-        action: "call"
-        target: "letter"
-        method: "invalidate_cache"
 
       - step: "Restart incoming letter"
         action: "call"
