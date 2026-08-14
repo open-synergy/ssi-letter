@@ -6,6 +6,14 @@ from odoo import fields, models
 
 
 class LetterMixin(models.AbstractModel):
+    """
+    Common fields shared by every kind of letter document.
+    Provides the type, date, title, courier, and partner fields that
+    ``incoming_letter`` and ``outgoing_letter`` inherit, on top of the
+    transaction/partner workflow already supplied by
+    ``mixin.transaction_partner``.
+    """
+
     _name = "mixin.letter"
     _inherit = [
         "mixin.transaction_partner",

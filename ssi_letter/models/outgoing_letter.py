@@ -8,6 +8,13 @@ from odoo.addons.ssi_decorator import ssi_decorator
 
 
 class OutgoingLetter(models.Model):
+    """
+    Track a letter sent to an external partner.
+    Manages the confirm/approve/open/done/cancel workflow of an
+    outgoing letter, including approval and sequence numbering on
+    the ``open`` state.
+    """
+
     _name = "outgoing_letter"
     _inherit = [
         "mixin.letter",

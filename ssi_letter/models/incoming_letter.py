@@ -8,6 +8,13 @@ from odoo.addons.ssi_decorator import ssi_decorator
 
 
 class IncomingLetter(models.Model):
+    """
+    Track a letter received from an external partner.
+    Manages the confirm/approve/done/cancel workflow of an incoming
+    letter, including approval and sequence numbering on the ``done``
+    state.
+    """
+
     _name = "incoming_letter"
     _inherit = [
         "mixin.letter",

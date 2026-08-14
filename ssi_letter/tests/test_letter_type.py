@@ -9,5 +9,8 @@ from odoo.tests import tagged
 
 @tagged("post_install", "-at_install")
 class TestLetterType(YamlTransactionCase):
+    """Test creation of ``letter_type`` and ``internal_memo_type``."""
+
     def test_letter_type(self):
+        """Run the letter type and internal memo type creation scenario."""
         self.run_yaml_scenario("test_data_letter_type.yaml")
