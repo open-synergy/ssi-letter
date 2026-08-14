@@ -4,7 +4,7 @@
 from . import (  # noqa: F401
     letter_type,
     internal_memo_type,
-    letter_mixin,
+    mixin_letter,
     outgoing_letter,
     incoming_letter,
     internal_memo,
