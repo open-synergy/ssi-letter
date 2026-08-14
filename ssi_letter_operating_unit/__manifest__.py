@@ -16,10 +16,13 @@
     "data": [
         "security/res_group/outgoing_letter.xml",
         "security/res_group/incoming_letter.xml",
+        "security/res_group/internal_memo.xml",
         "security/ir_rule/outgoing_letter.xml",
         "security/ir_rule/incoming_letter.xml",
+        "security/ir_rule/internal_memo.xml",
         "views/outgoing_letter_views.xml",
         "views/incoming_letter_views.xml",
+        "views/internal_memo_views.xml",
     ],
     "demo": [],
     "images": [],

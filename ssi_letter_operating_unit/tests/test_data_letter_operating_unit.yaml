@@ -72,3 +72,33 @@ scenarios:
           id:
             type: "value"
             operator: "is_truthy"
+
+  - name: "Internal Memo - Has operating_unit_id field"
+    steps:
+      - step: "Create internal memo type"
+        action: "create"
+        model: "internal_memo_type"
+        save_as: "memo_type"
+        values:
+          name: "Test Internal Memo Type OU"
+          code: "TIMTOU"
+
+      - step: "Create internal memo"
+        action: "create"
+        model: "internal_memo"
+        save_as: "memo"
+        as_user: "base.user_admin"
+        values:
+          type_id: "EVAL: registry['memo_type'].id"
+          date: 2026-01-15
+          title: "Test Internal Memo OU"
+          memo: "Test memo content OU"
+          operating_unit_id: "REF: operating_unit.main_operating_unit"
+
+      - step: "Assert internal memo has operating_unit_id"
+        action: "assert"
+        target: "memo"
+        asserts:
+          operating_unit_id:
+            type: "value"
+            operator: "is_truthy"
