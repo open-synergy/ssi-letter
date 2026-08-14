@@ -19,10 +19,10 @@
 ## Flow
 
 1. Open the **Letter ‣ Internal Memos** menu.
-2. Select one or more records to delete (check the checkbox).
+2. Open the record to delete.
 3. Click **Action** ‣ **Delete**.
 4. Click **OK** to confirm.
 
 ## Post-Condition
 
-- The selected records are permanently removed from the system.
+- The record is permanently removed from the system.

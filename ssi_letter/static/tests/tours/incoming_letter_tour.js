@@ -196,12 +196,27 @@ odoo.define("ssi_letter.incoming_letter_tour", function (require) {
             url: "/web",
         },
         [].concat(openIncomingLetterList(), [
-            // Flow 2 — Select the record to delete.
+            // Flow 2 — Open the record to delete.
+            // Deleting via the list checkbox proved non-deterministic in
+            // CI for the sibling outgoing_letter tour: the checkbox toggle
+            // sometimes never registers (row stays unselected,
+            // `.o_cp_action_menus` never renders — Odoo14 only mounts it
+            // once selectedRecords.length > 0). Deleting from the FORM's
+            // Action menu instead does not depend on list selection state
+            // at all — see patterns.md §I ("Checkbox list rapuh di 14.0 ...
+            // Membuka record lalu delete dari Action menu form jauh lebih
+            // deterministik").
             {
-                content: "Select the record's checkbox",
-                trigger:
-                    ".o_data_row:contains(TOUR-IL-DELETE) .o_list_record_selector input",
-                run: "click",
+                content: "Open the record",
+                trigger: ".o_data_row:contains(TOUR-IL-DELETE) .o_data_cell:first",
+                extra_trigger: ".o_list_view",
+            },
+            {
+                content: "Record is open",
+                trigger: ".o_form_view",
+                run: function () {
+                    // Assertion only.
+                },
             },
 
             // Flow 3 — Click Action > Delete.
@@ -227,6 +242,14 @@ odoo.define("ssi_letter.incoming_letter_tour", function (require) {
                 content: "Confirm deletion",
                 trigger: ".modal-footer button.btn-primary",
                 in_modal: true,
+            },
+
+            // After delete, 14.0 can display the NEXT record in the list
+            // instead of returning to the list itself. Click the
+            // breadcrumb explicitly before asserting the list.
+            {
+                content: "Click the Incoming Letter breadcrumb",
+                trigger: ".breadcrumb-item.o_back_button a:contains(Incoming Letter)",
             },
 
             // Post-Condition — the record is permanently removed.
