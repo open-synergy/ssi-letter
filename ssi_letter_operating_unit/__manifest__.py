@@ -1,6 +1,7 @@
 # Copyright 2024 OpenSynergy Indonesia
 # Copyright 2024 PT. Simetri Sinergi Indonesia
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl-3.0-standalone.html).
+# pylint: disable=C8101
 {
     "name": "Letter Management + Operating Unit Integration",
     "version": "14.0.1.3.1",
@@ -12,6 +13,7 @@
     "depends": [
         "ssi_letter",
         "ssi_operating_unit_mixin",
+        "web_tour",
     ],
     "data": [
         "security/res_group/outgoing_letter.xml",
@@ -23,6 +25,7 @@
         "views/outgoing_letter_views.xml",
         "views/incoming_letter_views.xml",
         "views/internal_memo_views.xml",
+        "views/assets.xml",
     ],
     "demo": [],
     "images": [],
