@@ -1044,3 +1044,23 @@ msgstr ""
 #: model:res.groups,name:ssi_letter.outgoing_letter_viewer_group
 msgid "Viewer"
 msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,field_description:ssi_letter.field_incoming_letter__website_message_ids
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo__website_message_ids
+#: model:ir.model.fields,field_description:ssi_letter.field_internal_memo_type__website_message_ids
+#: model:ir.model.fields,field_description:ssi_letter.field_letter_type__website_message_ids
+#: model:ir.model.fields,field_description:ssi_letter.field_mixin_letter__website_message_ids
+#: model:ir.model.fields,field_description:ssi_letter.field_outgoing_letter__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: ssi_letter
+#: model:ir.model.fields,help:ssi_letter.field_incoming_letter__website_message_ids
+#: model:ir.model.fields,help:ssi_letter.field_internal_memo__website_message_ids
+#: model:ir.model.fields,help:ssi_letter.field_internal_memo_type__website_message_ids
+#: model:ir.model.fields,help:ssi_letter.field_letter_type__website_message_ids
+#: model:ir.model.fields,help:ssi_letter.field_mixin_letter__website_message_ids
+#: model:ir.model.fields,help:ssi_letter.field_outgoing_letter__website_message_ids
+msgid "Website communication history"
+msgstr ""
