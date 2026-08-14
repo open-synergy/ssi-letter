@@ -9,5 +9,8 @@ from odoo.tests import tagged
 
 @tagged("post_install", "-at_install")
 class TestIncomingLetter(YamlTransactionCase):
+    """Test the ``incoming_letter`` confirm/approve/done workflow."""
+
     def test_incoming_letter(self):
+        """Run the full workflow and restart-from-confirm scenarios."""
         self.run_yaml_scenario("test_data_incoming_letter.yaml")

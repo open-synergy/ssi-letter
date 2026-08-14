@@ -8,6 +8,13 @@ from odoo.addons.ssi_decorator import ssi_decorator
 
 
 class InternalMemo(models.Model):
+    """
+    Track a memo circulated internally to a list of recipients.
+    Manages the confirm/approve/done/cancel workflow of an internal
+    memo, including approval and sequence numbering on the ``done``
+    state.
+    """
+
     _name = "internal_memo"
     _inherit = [
         "mixin.transaction_cancel",
