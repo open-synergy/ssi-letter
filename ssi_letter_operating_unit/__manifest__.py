@@ -4,7 +4,7 @@
 # pylint: disable=C8101
 {
     "name": "Letter Management + Operating Unit Integration",
-    "version": "14.0.1.3.1",
+    "version": "14.0.1.4.0",
     "contributors": ["Andhitia Rama <andhitia.r@gmail.com>"],
     "website": "https://simetri-sinergi.id",
     "author": "OpenSynergy Indonesia, PT. Simetri Sinergi Indonesia",
