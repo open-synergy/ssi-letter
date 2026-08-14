@@ -6,6 +6,13 @@ from odoo import models
 
 
 class IncomingLetter(models.Model):
+    """
+    Adds Operating Unit ownership to incoming letter documents.
+    Restricts each incoming letter to a single operating unit via
+    ``mixin.single_operating_unit``, enabling operating unit based
+    visibility and security rules for the document.
+    """
+
     _name = "incoming_letter"
     _inherit = [
         "incoming_letter",
